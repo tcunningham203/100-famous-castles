@@ -1,0 +1,22 @@
+{
+  "name": "castle-project",
+  "version": "1.0.0",
+  "description": "When visiting one of Japan's famous castles, you can apply a unique rubber stamp to your notebook. Use this application to prepare for a trip, read and write reviews, and learn fun facts on your journey to collect all 100 stamps.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcunningham203/100-famous-castles.git"
+  },
+  "keywords": [],
+  "author": "Tim Cunningham, Frank Olmsted, Lauren Sullivan, Sudarshan Samaddar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tcunningham203/100-famous-castles/issues"
+  },
+  "homepage": "https://github.com/tcunningham203/100-famous-castles#readme"
+}
