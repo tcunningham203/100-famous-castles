@@ -2,38 +2,81 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registry</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User Registry
-    </h1>
-    <h2 class="text-warning">.text-secondary</h2>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
+    {{!-- This is the nav bar. Currently only the logout button works because it was part of the placeholder text from
+    the module. --}}
+    {{!-- TODO: Have the links work. You can do this using the homeroutes.js file, you may also have to create some
+    additional scripts in the public/js folder? --}}
+    <header class="justify-space-between align-center me-auto ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <h1 class="navbar-brand ">日本 Castle Journal</h1>
+                {{#if logged_in}}
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        
+                        <li class="nav-item">
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-  <script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+
+                            <button class="btn btn-secondary" id="logout">Logout</button>
+                        </li>
+                        <li class="nav-item">
+
+
+                            <button class="btn btn-secondary" id="stamps">My Stamps</button>
+                        </li>
+                        <li class="nav-item">
+
+
+                            <button class="btn btn-secondary" id="map">Castle Map</button>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control mt-3 me-2 col-md-3 mx-auto" type="search"
+                            placeholder="Search for castles by name, prefecture, number, city, or region"
+                            aria-label="Search">
+                        <button class="btn btn-secondary mt-3" type="submit">Go!</button>
+                    </form>
+
+                    
+
+
+
+                    {{/if}}
+
+                </div>
+            </div>
+        </nav>
+
+
+
+    </header>
+    <main class="container container-fluid mt-5">
+
+        {{{ body }}}
+    </main>
+    <footer>
+
+    </footer>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 
 </html>
