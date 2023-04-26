@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Registry</title>
   <link rel="stylesheet" href="/css/jass.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -13,6 +15,7 @@
     <h1>
       User Registry
     </h1>
+    <h2 class="text-warning">.text-secondary</h2>
     {{#if logged_in}}
     <nav>
       <button class="btn" id="logout">logout</button>
@@ -29,6 +32,8 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 </body>
 
 </html>
