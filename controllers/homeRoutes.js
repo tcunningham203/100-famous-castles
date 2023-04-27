@@ -11,7 +11,7 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('map', {
+    res.render('stamps', {
       users,
       logged_in: req.session.logged_in,
     });
