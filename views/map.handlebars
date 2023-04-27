@@ -1,4 +1,47 @@
-{{#each users as |user| }}
+
+<div class="row  ">
+  
+  <div class="collapse show test col-md-6" id="element2">
+    
+      <h2>Login</h2>
+      <form class="form login-form">
+        <div class="form-group">
+          <label for="email-login">Email:</label>
+          <input class="form-input" type="text" id="email-login" />
+        </div>
+        <div class="form-group">
+          <label for="password-login">Password:</label>
+          <input class="form-input" type="password" id="password-login" />
+        </div>
+
+
+
+        <div class="row p-2 flex-fill bd-highlight  ">
+          <div class="d-flex col-6 mt-2 mb-5">
+            <button class="btn btn-primary col-12" type="submit">Login</button>
+          </div>
+          <div class="d-flex col-6 mt-2 mb-5">
+            <button class="btn btn-primary text-nowrap col-12" type="button" data-bs-toggle="collapse" data-bs-target=".test"
+              >
+              Make Account
+            </button>
+          </div>
+        </div>
+
+
+
+      </form>
+    
+  </div>
+
+<div class="col-md-6 mb-4">
+    <img src="/images/japanmap.png" class="rounded mx-auto d-block" style="max-width:100%;" alt="100 Castles Offical Stamp Book">
+  </div>
+
+ </div>
+
+{{!-- This is what was written during the copy pasting. This should eventually be deleted. --}}
+{{!-- {{#each users as |user| }}
 <div class="row align-center mb-5">
   <div class="col-md-6">
     <h2>{{{get_emoji}}} {{user.name}}</h2>
@@ -7,4 +50,4 @@
     <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
   </div>
 </div>
-{{/each}}
+{{/each}} --}}
