@@ -15,53 +15,36 @@
     the module. --}}
     {{!-- TODO: Have the links work. You can do this using the homeroutes.js file, you may also have to create some
     additional scripts in the public/js folder? --}}
-    <header class="justify-space-between align-center me-auto ">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <h1 class="navbar-brand ">日本 Castle Journal</h1>
+    <header class=" ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid ">
+                <h1 class="navbar-brand mt-3">日本 Castle Journal</h1>
                 {{#if logged_in}}
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler mt-1 mb-1 me-2" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        
-                        <li class="nav-item">
-
-
-                            <button class="btn btn-secondary" id="logout">Logout</button>
-                        </li>
-                        <li class="nav-item">
-
-
-                            <button class="btn btn-secondary" id="stamps">My Stamps</button>
-                        </li>
-                        <li class="nav-item">
-
-
-                            <button class="btn btn-secondary" id="map">Castle Map</button>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control mt-3 me-2 col-md-3 mx-auto" type="search"
+                <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+                    <form class="d-flex col-lg-5 mt-2">
+                        <input class="form-control mt-3 me-3 mb-3 " type="search"
                             placeholder="Search for castles by name, prefecture, number, city, or region"
                             aria-label="Search">
-                        <button class="btn btn-secondary mt-3" type="submit">Go!</button>
+                        <button class="btn btn-secondary mt-3 mb-3" type="submit">Go!</button>
                     </form>
-
+                    <ul class="navbar-nav col-lg-4 ">
+                        <div class="d-grid gap-2 d-lg-flex mt-2  ">
+                            <button class="btn btn-primary col-lg-7 " id="map" type="button">Castle Map</button>
+                            <button class="btn btn-primary  col-lg-7" id="stamps" type="button">My Stamps</button>
+                            <button class="btn btn-primary col-lg-4 " id="logout" type="button">Logout</button>
+                        </div>
+                    </ul>
                     
-
-
-
                     {{/if}}
 
                 </div>
             </div>
         </nav>
-
-
 
     </header>
     <main class="container container-fluid mt-5">
