@@ -24,10 +24,13 @@ const sess = {
 };
 
 app.use(session(sess));
+
+
 //Bootstrap added by Tim. After you have npm installed, this should link to the node modules folder with the bootstrap stuff in it. In this way, all the bootstrap stuff is actually on our server and we dont have to call somewhere else to get it. 
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap-icons/font')); // redirect bootstrap-icons
 
 
 

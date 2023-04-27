@@ -7,6 +7,7 @@
     <title>User Registry</title>
     <link rel="stylesheet" href="/css/jass.css">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
@@ -18,8 +19,8 @@
     additional scripts in the public/js folder? --}}
     <header class=" ">
         <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #163850;">
-            <div class="container-fluid ">
-                <h1 class="navbar-brand mt-3 ">日本 Castle Journal</h1>
+            <div class="container-fluid justify-content-center">
+                <h1 class="navbar-brand mt-1 mx-auto ms-2 me-2" style="font-size: 1.5rem">日本 Castle Journal</h1>
                 {{#if logged_in}}
                 <button class="navbar-toggler mt-1 mb-1 me-2" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -27,17 +28,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse   " id="navbarSupportedContent">
-                    <form class="d-flex col-lg-5 mt-2">
-                        <input class="form-control  me-3 mb-0 " type="search"
+                    <form class="d-flex col-lg-5 mt-2 ms-2 me-2">
+                        <input class="form-control bg-light me-3 mb-0 " type="search" style="font-size: 1rem; "
                             placeholder="Search for castles by name, prefecture, number, city, or region"
                             aria-label="Search">
-                        <button class="btn btn-secondary  mb-0" type="submit">Go!</button>
+                        <button class="btn btn-light  mb-0" type="submit" style="font-size: 1.5rem"><i class="bi-search" style="font-size: 1.5rem; "></i></button>
                     </form>
                     <ul class="navbar-nav p-2 flex-fill bd-highlight ">
                         <div class="d-grid gap-2 d-lg-flex mt-2 p-2 flex-fill bd-highlight ">
-                            <button class="btn btn-primary col-lg-4 " id="map" type="button">Castle Map</button>
-                            <button class="btn btn-primary  col-lg-4 " id="stamps" type="button">My Stamps</button>
-                            <button class="btn btn-primary col-lg-2  " id="logout" type="button">Logout</button>
+                            <button class="btn btn-outline-light col-lg-4 ms-2 me-2 " id="map" type="button" style="font-size: 1.5rem"><i class="bi-geo-alt" style="font-size: 1.5rem; "></i> Castle Map</button>
+                            <button class="btn btn-outline-light  ms-2 me-2 col-lg-4 " id="stamps" type="button" style="font-size: 1.5rem"><i class="bi-journal-check" style="font-size: 1.5rem; "></i> My Stamps</button>
+                            <button class="btn btn-outline-secondary ms-2 me-2 col-lg-3  " id="logout" type="button" style="font-size: 1.5rem"><i class="bi-power" style="font-size: 1.5rem; "></i> Logout</button>
                         </div>
                     </ul>
                     
