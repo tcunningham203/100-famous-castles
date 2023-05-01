@@ -50,7 +50,11 @@
 
     </header>
     <main class="container container-fluid mt-2 ">
-
+{{!-- this toast appears when the account was created successfully. relevant js for ALL toasts is in the public login script--}}
+      <div class="toast bg-success text-white text-center " style="position: absolute; " id="success1"  data-bs-delay="3300">
+    
+        <strong class="me-auto h4 "><i class="bi-exclamation-triangle-fill "></i> Account Created! Welcome!</strong>
+      </div>
         {{{ body }}}
     </main>
     <footer>

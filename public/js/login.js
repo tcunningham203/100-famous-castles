@@ -12,12 +12,21 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      // Creates slight delay before logging in to display toast "Welcome back!"
+      $("#asdf1").toast("show");
+      setTimeout(function(){
+        document.location.replace('/');
+      }, 1500);
     } else {
-      alert('Failed to log in');
-    }
+      // toast('Incorrect username or password.');
+            $("#incorrect1").toast("show");
+  }
   }
 };
+
+const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
@@ -34,9 +43,14 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      // Creates slight delay before logging in to display toast "Account Created! Welcome!"
+      $("#asdf2").toast("show");
+      setTimeout(function(){
+        document.location.replace('/');
+      }, 2200);
     } else {
-      alert('Failed to sign up.');
+      // alert('Failed to sign up.');
+      $("#incorrect2").toast("show");
     }
   }
 };

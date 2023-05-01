@@ -17,8 +17,24 @@
   <div class="collapse show test col-md-6" id="element2">
     
       <h2 class="text-center"><br>Log in to get started.</h2>
+
+      {{!-- this toast appears when the username or pass is wrong. relevant js for ALL toasts is in the public login script--}}
+      <div class="toast bg-danger text-white text-center " style="position: absolute; " id="incorrect1"  data-bs-delay="3300">
+    
+        <strong class="me-auto h4 "><i class="bi-exclamation-triangle "></i> Incorrect username or password.</strong>
+      </div>
+
+{{!-- this toast appears when you log in successfully. relevant js for ALL toasts is in the public login script--}}
+      <div class="toast bg-success text-white text-center " style="position: absolute; " id="asdf1"  data-bs-delay="1500">
+    
+        <strong class="me-auto h4 "><i class="bi-check-circle "></i> Welcome back!</strong>
+      </div>
+
+
+
       <form class="form login-form">
         <div class="form-group">
+          
           <label for="email-login"><br>Email:</label>
           <input class="form-input" type="text" id="email-login" />
         </div>
@@ -38,7 +54,10 @@
               >
               New Account
             </button>
+
+            
           </div>
+          
         </div>
 
 
@@ -46,10 +65,22 @@
       </form>
     
   </div>
-{{!-- TODO: Get the sign up working. I took this template from the mini project but only for this page. So the rest of the bits need to be added. --}}
+
   <div class="collapse test col-md-6" id="element3">
    
       <h2 class="text-center"><br>Signing up is fast and easy.</h2>
+      {{!-- this toast appears when something is wrong. relevant js for ALL toasts is in the public login script--}}
+      <div class="toast bg-danger text-white text-center " style="position: absolute; " id="incorrect2"  data-bs-delay="3300">
+    
+        <strong class="me-auto h4 "><i class="bi-exclamation-triangle-fill "></i> Failed to sign up.</strong>
+      </div>
+
+{{!-- this toast appears when the account was created successfully. relevant js for ALL toasts is in the public login script--}}
+      <div class="toast bg-success text-white text-center " style="position: absolute; " id="asdf2"  data-bs-delay="2200">
+    
+        <strong class="me-auto h4 "><i class="bi-check-circle "></i> Account Created! Welcome!</strong>
+      </div>
+
       <form class="form signup-form">
         <div class="form-group">
           <label for="name-signup"><br>Name:</label>
@@ -77,6 +108,7 @@
       </form>
     
   </div>
+
 
 
 
