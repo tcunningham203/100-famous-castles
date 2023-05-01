@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
       $("#asdf1").toast("show");
       setTimeout(function(){
         document.location.replace('/');
-      }, 1500);
+      }, 1200);
     } else {
       // toast('Incorrect username or password.');
             $("#incorrect1").toast("show");
