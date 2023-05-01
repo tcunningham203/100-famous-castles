@@ -4,7 +4,7 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
-  if (email && password) {
+  if (email && password && email != null && password != null) {
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
@@ -21,11 +21,11 @@ const loginFormHandler = async (event) => {
       // toast('Incorrect username or password.');
             $("#incorrect1").toast("show");
   }
+  } else {
+    // alert('Incorrect username or password.');
+    $("#incorrect1").toast("show");
   }
 };
-
-const toastTrigger = document.getElementById('liveToastBtn')
-const toastLiveExample = document.getElementById('liveToast')
 
 
 const signupFormHandler = async (event) => {
@@ -34,13 +34,17 @@ const signupFormHandler = async (event) => {
   const name = document.querySelector('#name-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
+  const password2 = document.querySelector('#confirm-signup').value.trim();
 
-  if (name && email && password) {
+
+
+  if (name && email && password && password2 && password === password2 && name != null && email != null && password != null && password2 != null) {
     const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({ name, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
+   
 
     if (response.ok) {
       // Creates slight delay before logging in to display toast "Account Created! Welcome!"
@@ -52,6 +56,9 @@ const signupFormHandler = async (event) => {
       // alert('Failed to sign up.');
       $("#incorrect2").toast("show");
     }
+  } else {
+    // alert('Failed to sign up.');
+    $("#incorrect2").toast("show");
   }
 };
 
