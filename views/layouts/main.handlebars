@@ -37,7 +37,7 @@
                     <ul class="navbar-nav p-2 flex-fill bd-highlight ">
                         <div class="d-grid gap-2 d-lg-flex mt-2 p-2 flex-fill bd-highlight ">
                             <button class="btn btn-outline-light col-lg-4  " id="map" type="button" style="font-size: 1.5rem"><i class="bi-geo-alt" style="font-size: 1.5rem; "></i> Castle Map</button>
-                            <button class="btn btn-outline-light   col-lg-4 " id="stamps" type="button" style="font-size: 1.5rem"><i class="bi-journal-check" style="font-size: 1.5rem; "></i> My Stamps</button>
+                            <button class="btn btn-outline-light   col-lg-4 " id="stamps" type="button" style="font-size: 1.5rem" onclick="renderStampsPage()"><i class="bi-journal-check" style="font-size: 1.5rem; "></i> My Stamps</button>
                             <button class="btn btn-outline-secondary  col-lg-3  " id="logout" type="button" style="font-size: 1.5rem"><i class="bi-power" style="font-size: 1.5rem; "></i> Logout</button>
                         </div>
                     </ul>
@@ -59,6 +59,7 @@
 
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
+    <script src="/js/pages.js"></script>
     {{/if}}
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
