@@ -49,7 +49,7 @@ Castle.init(
       type: DataTypes.STRING,
     },
     history: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
   },
   {
