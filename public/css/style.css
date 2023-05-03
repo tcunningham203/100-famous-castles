@@ -15,7 +15,7 @@
 
 .card {
   margin: 0 0.5em;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  
   border: none;
   border-radius: 0;
 }
@@ -27,6 +27,43 @@
   z-index: 9999;
   width: 70%;
   padding: 10px;
+}
+
+#travelborder {
+  border-top:1px solid rgb(255, 255, 255);
+  position: relative;
+}
+#travelborder:after {
+  padding:0;margin:0;display:block;/* probably not really needed? */
+  content: "";
+  width:50%;
+  height:1.1px;
+  background-color:#163850;
+  position: absolute;
+  right:0;
+  top:-1px;
+}
+
+#historyborder {
+  border-top:1px solid rgb(255, 255, 255);
+  position: relative;
+}
+#historyborder:after {
+  padding:0;margin:0;display:block;/* probably not really needed? */
+  content: "";
+  width:50%;
+  height:1.1px;
+  background-color:#163850;
+  position: absolute;
+  left:0;
+  top:-1px;
+}
+
+li
+{
+  
+  padding: 8px;
+  
 }
 
 .carousel-caption {
