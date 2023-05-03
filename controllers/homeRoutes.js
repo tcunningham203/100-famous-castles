@@ -35,4 +35,12 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/stampbook", withAuth, async (req, res) => {
+  try {
+      res.render("stamps");
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 module.exports = router;
