@@ -1,39 +1,57 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Comments extends Model {}
+class Comments extends Model { }
 
 Comments.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-    },
-    nameen: {
-      type: DataTypes.STRING,
-    },
-
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-          isEmail: true,
+    {
+        castle_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'Castle',
+                key: 'id',
+            },
         },
-      }
-  },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "Comments",
-  }
+        castleName: {
+            type: DataTypes.STRING,
+            references: {
+                model: 'Castle',
+                key: 'nameen',
+            },
+
+        },
+
+        user_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            references: {
+                model: 'User',
+                key: 'name',
+            },
+        },
+        user_id: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: true,
+            },
+            references: {
+                model: 'User',
+                key: 'email',
+            },
+        },
+    },
+    {
+        sequelize,
+        timestamps: true,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "Comments",
+    }
 );
 
 module.exports = Comments;
+
+
