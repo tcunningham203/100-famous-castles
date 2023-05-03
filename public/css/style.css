@@ -7,16 +7,15 @@
 
 .card img {
   width: auto;
-  height:auto;
-  max-width:230px;
-  max-height:155px;
+  height: auto;
+  max-width: 230px;
+  max-height: 155px;
   z-index: 222;
 }
 
-
 .card {
   margin: 0 0.5em;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  
   border: none;
   border-radius: 0;
 }
@@ -28,6 +27,43 @@
   z-index: 9999;
   width: 70%;
   padding: 10px;
+}
+
+#travelborder {
+  border-top:1px solid rgb(255, 255, 255);
+  position: relative;
+}
+#travelborder:after {
+  padding:0;margin:0;display:block;/* probably not really needed? */
+  content: "";
+  width:50%;
+  height:1.1px;
+  background-color:#163850;
+  position: absolute;
+  right:0;
+  top:-1px;
+}
+
+#historyborder {
+  border-top:1px solid rgb(255, 255, 255);
+  position: relative;
+}
+#historyborder:after {
+  padding:0;margin:0;display:block;/* probably not really needed? */
+  content: "";
+  width:50%;
+  height:1.1px;
+  background-color:#163850;
+  position: absolute;
+  left:0;
+  top:-1px;
+}
+
+li
+{
+  
+  padding: 8px;
+  
 }
 
 .carousel-caption {
@@ -54,45 +90,31 @@
   .card img {
     height: 11em;
   }
-
-
 }
 
 @media (max-width: 1200px) {
-
-
   #colorfulmappic.rounded.mx-auto.d-block {
     max-width: 100%;
   }
-
-
-
 }
 
 @media (min-width: 1200px) {
-
- 
-
   #colorfulmappic.rounded.mx-auto.d-block {
     max-width: 42%;
     position: fixed;
-
-
   }
-
 }
 
-
-*{
+* {
   box-sizing: border-box;
 }
-.book-section{
+.book-section {
   height: 70vh;
   width: 100%;
   padding: 10px 0;
   text-align: center;
 }
-.book-section > .container{
+.book-section > .container {
   height: 100%;
   width: 100%;
   position: relative;
@@ -102,25 +124,26 @@
   margin-bottom: 30px;
   perspective: 3200px;
 }
-.container > .right{
+.container > .right {
   position: absolute;
   height: 100%;
   width: 50%;
   transition: 0.7s ease-in-out;
   transform-style: preserve-3d;
 }
-.book-section > .container > .right{
-  right:0;
+.book-section > .container > .right {
+  right: 0;
   transform-origin: left;
   border-radius: 10px 0 0 10px;
 }
-.right > figure.front, .right > figure.back{
+.right > figure.front,
+.right > figure.back {
   margin: 0;
   height: 100%;
   width: 100%;
   position: absolute;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   z-index: 1;
   background-size: 200%;
   background-repeat: no-repeat;
@@ -128,39 +151,36 @@
   background-color: white;
   overflow: hidden;
 }
-.right > figure.front{
+.right > figure.front {
   background-position: right;
   border-radius: 0 10px 10px 0;
-  box-shadow: 2px 2px 15px -2px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.2);
 }
-.right > figure.back{
+.right > figure.back {
   background-position: left;
   border-radius: 10px 0 0 10px;
-  box-shadow: -2px 2px 15px -2px rgba(0,0,0,0.2);
+  box-shadow: -2px 2px 15px -2px rgba(0, 0, 0, 0.2);
   transform: rotateY(180deg);
 }
-.flip{
+.flip {
   transform: rotateY(-180deg);
 }
-.flip::before{
+.flip::before {
   content: "";
   position: absolute;
-  top:0;
-  left:0;
- 
+  top: 0;
+  left: 0;
+
   width: 100%;
   height: 100%;
   border-radius: 0 10px 10px 0;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-
-.front#cover, .back#back-cover{
+.front#cover,
+.back#back-cover {
   background-color: #eedebb;
   display: grid;
-    justify-content: center;
-    align-content: space-evenly;
-  
-  
-  
+  justify-content: center;
+  align-content: space-evenly;
 }
