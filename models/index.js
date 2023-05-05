@@ -1,5 +1,5 @@
 const User = require("./User");
-// const Castle = require("./Castle");
+const Castle = require("./Castle");
 const Stamp = require("./Stamp");
 
 User.hasMany(Stamp, {
@@ -11,4 +11,4 @@ Stamp.hasMany(User, {
   foreignKey: "user_id",
 });
 
-module.exports = { User, Stamp };
+module.exports = { User, Stamp, Castle };
