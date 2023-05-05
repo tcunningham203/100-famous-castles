@@ -14,7 +14,7 @@ router.get("/", withAuth, async (req, res) => {
     const castleData = await Castle.findAll({});
 
     const castles = castleData.map((castle) => castle.get({ plain: true }));
-    console.log(castles);
+    // console.log(castles);
 
     const stampData = await Stamp.findAll({});
 
@@ -50,12 +50,22 @@ router.get("/stampbook", withAuth, async (req, res) => {
   }
 });
 
-router.get("/castle/:stampnumber", withAuth, async (req, res) => {
+
+
+router.get("/castle/:id", withAuth, async (req, res) => {
   try {
+
+    const castleData = await Castle.findByPk(req.params.id);
+
+    const castle = castleData.get({ plain: true });
+    console.log(castle);
+
     res.render("castle", {
+      ...castle,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
