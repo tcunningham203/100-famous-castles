@@ -2,7 +2,7 @@ var right = document.getElementsByClassName("right");
 var si = right.length;
 var z = 1;
 
-document.getElementById("leftbutton").disabled = true;
+
 
 function disableCheck() {
   if (si == right.length) {
@@ -21,7 +21,7 @@ function turnRight() {
     document.getElementById("rightbutton").disabled = true;
     setTimeout(function () {
       document.getElementById("rightbutton").disabled = false;
-    }, 300);
+    }, 400);
     disableCheck;
   } else {
     document.getElementById("rightbutton").disabled = true;
@@ -39,7 +39,7 @@ function turnLeft() {
     document.getElementById("leftbutton").disabled = true;
     setTimeout(function () {
       document.getElementById("leftbutton").disabled = false;
-    }, 300);
+    }, 400);
   } else {
     document.getElementById("leftbutton").disabled = true;
   }

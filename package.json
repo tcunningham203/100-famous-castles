@@ -29,6 +29,7 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "jquery": "^3.6.4",
+    "magic.css": "^1.4.8",
     "mysql2": "^2.2.5",
     "popper.js": "^1.16.1",
     "sequelize": "^6.3.5"
