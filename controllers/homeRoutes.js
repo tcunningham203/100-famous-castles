@@ -43,7 +43,7 @@ router.get("/login", (req, res) => {
 router.get("/stampbook", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
+      attributes: { exclude: ["password"] },
     });
 
     const user = userData.get({ plain: true });
@@ -58,11 +58,8 @@ router.get("/stampbook", withAuth, async (req, res) => {
   }
 });
 
-
-
 router.get("/castle/:id", withAuth, async (req, res) => {
   try {
-
     const castleData = await Castle.findByPk(req.params.id);
 
     const castle = castleData.get({ plain: true });

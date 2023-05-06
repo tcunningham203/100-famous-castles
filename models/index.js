@@ -7,8 +7,16 @@ User.hasMany(Stamp, {
   onDelete: "CASCADE",
 });
 
-Stamp.hasMany(User, {
+Stamp.belongsTo(User, {
   foreignKey: "user_id",
+});
+
+Stamp.belongsTo(Castle, {
+  foreignKey: "castle_id",
+});
+
+Castle.hasOne(Stamp, {
+  foreignKey: "castle_id",
 });
 
 module.exports = { User, Stamp, Castle };
