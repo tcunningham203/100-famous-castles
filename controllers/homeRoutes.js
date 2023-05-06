@@ -42,10 +42,18 @@ router.get("/login", (req, res) => {
 
 router.get("/stampbook", withAuth, async (req, res) => {
   try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
+
+    const user = userData.get({ plain: true });
+
     res.render("stamps", {
+      ...user,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
