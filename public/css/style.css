@@ -489,3 +489,60 @@ li
 .hidden {
   display: none;
 }
+
+.short-text { display: none; }
+
+@media (max-width: 1053px) {
+
+.long-text { display: none; }
+.short-text { display: inline-block; }
+
+.nav {
+  --bs-nav-link-padding-x: 0rem;
+  --bs-nav-link-padding-y: 0rem
+}
+
+
+.card img {
+  width: auto;
+  height: auto;
+  max-width: 155px;
+  max-height: 155px;
+  z-index: 2;
+}
+
+}
+
+@media (max-width: 1444px) {
+
+  
+  img#stampeedo {
+    width: 75%;
+    height: auto;
+    max-width: 225px;
+    max-height: 225px;
+    z-index: 2;
+  }
+  .book-section {
+    height: 100vh;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  }
+
+
+  @media (max-width: 993px) {
+
+  
+    
+    .book-section {
+      height: 1700px;
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+    }
+    
+    }
+  
