@@ -1,248 +1,579 @@
-
-
 <div class="row">
 
-  <div id="sideaccord" class="col-lg-5 mb-4">
 
-    <h3 class="mt-3 mb-3 text-center">Select a region.<br />
-      Then select a castle.</h3>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button d-block text-center collapsed"
-            style="background-color: #9accd4; color: #000000; font-size: 2rem" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Hokkaido
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul>
-              <a href="/castle/1"><li>001 Nemuro Peninsula Chashi Site 根室半島チャシ跡群</li></a>
-              <a href="/castle/2"><li>002 Goryokaku Fort 五稜郭</li></a>
-              <a href="/castle/3"><li>003 Matsumae Castle 松前城</li></a>
-            </ul>
+
+  <div class="card p-0 mt-3 nav nav-tabs nav-fill " style=" height: 100%;    background: #576672; color: #ffffff">
+
+    <nav class="  col-md-12  p-0 ">
+      <div class="nav nav-tabs nav-fill p-0 border-0 bg-transparent col-md-12 m-0"
+        style=" background: #576672; color: #ffffff " id="nav-tab" role="tablist">
+        <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+          role="tab" aria-controls="nav-home" aria-selected="false"
+          style="border-top-left-radius: 30px; border-top-right-radius: 30px; background: #163850; color: #ffffff;  padding:0; font-size:1.2rem; max-width:4%;"><i
+            class="bi-pin-map " style="font-size: 2rem; "></i></button>
+        <button class="nav-link " id="tab-hokkaido" data-bs-toggle="tab" data-bs-target="#hokkaido-content"
+          type="button"
+          style=" border-top-left-radius: 30px; border-top-right-radius: 30px; background: #2c3e44; color: #ffffff; font-size:1.2rem; max-width:12%;"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Hokkaido</button>
+        <button class="nav-link " id="tab-tohoku" data-bs-toggle="tab" data-bs-target="#tohoku-content" type="button"
+          style=" border-top-left-radius: 30px; border-top-right-radius: 30px; background: #1d283b; color: #ffffff; font-size:1.2rem; max-width:12%;"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Tohoku</button>
+        <button class="nav-link " id="tab-kanto" data-bs-toggle="tab" data-bs-target="#kanto-content" type="button"
+          style=" border-top-left-radius: 30px; border-top-right-radius: 30px; background: #382844; color: #ffffff; font-size:1.2rem; max-width:12%;"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Kanto</button>
+        <button class="nav-link " id="tab-chubu" data-bs-toggle="tab" data-bs-target="#chubu-content" type="button"
+          style=" border-top-left-radius: 30px; border-top-right-radius: 30px; background: #3f121c; color: #ffffff; font-size:1.2rem; max-width:12%;"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Chubu</button>
+        <button class="nav-link " id="tab-kansai" data-bs-toggle="tab" data-bs-target="#kansai-content" type="button"
+          style=" border-top-left-radius: 30px; border-top-right-radius: 30px; background: #5e4c32; color: #ffffff; font-size:1.2em; max-width:12%;"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Kansai</button>
+        <button class="nav-link " id="tab-chugoku" data-bs-toggle="tab" data-bs-target="#chugoku-content" type="button"
+          style=" border-top-left-radius: 30px; border-top-right-radius: 30px; background: #302f1a; color: #ffffff; font-size:1.2rem; max-width:12%;"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Chugoku</button>
+        <button class="nav-link " id="tab-shikoku" data-bs-toggle="tab" data-bs-target="#shikoku-content" type="button"
+          style=" border-top-left-radius: 30px; border-top-right-radius: 30px; background: #0c2513; color: #ffffff; font-size:1.2rem; max-width:12%;"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Shikoku</button>
+        <button class="nav-link " id="tab-kyushu" data-bs-toggle="tab" data-bs-target="#kyushu-content" type="button"
+          style=" border-top-left-radius: 30px; border-top-right-radius: 30px; background: #3d4639; color: #ffffff; font-size:1.2rem; max-width:12%;"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Kyushu</button>
+
+      </div>
+    </nav>
+    <div class="tab-content  " id="nav-tabContent">
+      <div class="tab-pane fade active show  " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+        <div id="map-border" class="card  border border-white    mx-auto"
+          style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #163850; color: #ffffff">
+          <div class="row    mx-auto "
+            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: #163850; color: #ffffff">
+            <div class="col-5 ">
+              <h1 class="text-center">日本 Castle Map</h1>
+              <h3 class="text-center"><br><br>Each colored area represents a region, and numbers mark the castles there.</h3>
+              <h3 class="text-center"><br>Use the tabs above to select a region, then choose a castle to learn more.</h3>
+            </div>
+            <div class="col-6 mt-3 mb-3">
+              <img src="/images/maps/japanmap0.png"
+                style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
+                alt="Map of Japan's Castles" />
+            </div>
           </div>
+
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingTwo">
-          <button class="accordion-button d-block text-center collapsed"
-            style="background-color: #909bd3; color: #000000; font-size: 2rem" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            Tohoku
-          </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul>
-              <a href="/castle/4"><li>004 Hirosaki Castle 弘前城</li></a>
-              <a href="/castle/5"><li>005 Ne Castle 根城</li></a>
-              <a href="/castle/6"><li>006 Morioka Castle 盛岡城</li></a>
-              <a href="/castle/7"><li>007 Taga Castle 多賀城</li></a>
-              <a href="/castle/8"><li>008 Sendai Castle 仙台城</li></a>
-              <a href="/castle/9"><li>009 Kubota Castle 久保田城</li></a>
-              <a href="/castle/10"><li>010 Yamagata Castle 山形城</li></a>
-              <a href="/castle/11"><li>011 Nihonmatsu Castle 二本松城</li></a>
-              <a href="/castle/12"><li>012 Aizuwakamatsu Castle 会津若松城</li></a>
-              <a href="/castle/13"><li>013 Shirakawa Castle 白河城</li></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingThree">
-          <button class="accordion-button d-block text-center collapsed"
-            style="background-color: #c6bae2; color: #000000; font-size: 2rem" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            Kanto
-          </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul>
-              <a href="/castle/14"><li>014 Mito Castle 水戸城</li></a>
-              <a href="/castle/15"><li>015 Ashikagashi Yakata 足利氏館</li></a>
-              <a href="/castle/16"><li>016 Minowa Castle 箕輪城</li></a>
-              <a href="/castle/17"><li>017 Kanayama Castle 金山城</li></a>
-              <a href="/castle/18"><li>018 Hachigata Castle 鉢形城</li></a>
-              <a href="/castle/19"><li>019 Kawagoe Castle 川越城</li></a>
-              <a href="/castle/20"><li>020 Sakura Castle 佐倉城</li></a>
-              <a href="/castle/21"><li>021 Edo Castle 江戸城</li></a>
-              <a href="/castle/22"><li>022 Hachioji Castle 八王子城</li></a>
-              <a href="/castle/23"><li>023 Odawara Castle 小田原城</li></a>
-              <a href="/castle/24"><li>024 Tsutsujigasaki Palace 躑躅ヶ崎館</li></a>
-              <a href="/castle/25"><li>025 Kofu Castle 甲府城</li></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingFour">
-          <button class="accordion-button d-block text-center collapsed"
-            style="background-color: #d1a8ae; color: #000000; font-size: 2rem" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-            Chubu
-          </button>
-        </h2>
-        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul>
-              <a href="/castle/26"><li>026 Matsushiro Castle 松代城</li></a>
-              <a href="/castle/27"><li>027 Ueda Castle 上田城</li></a>
-              <a href="/castle/28"><li>028 Komoro Castle 小諸城</li></a>
-              <a href="/castle/29"><li>029 Matsumoto Castle 松本城</li></a>
-              <a href="/castle/30"><li>030 Takato Castle 高遠城</li></a>
-              <a href="/castle/31"><li>031 Shibata Castle 新発田城</li></a>
-              <a href="/castle/32"><li>032 Kasugayama Castle 春日山城</li></a>
-              <a href="/castle/33"><li>033 Takaoka Castle 高岡城</li></a>
-              <a href="/castle/34"><li>034 Nanao Castle 七尾城</li></a>
-              <a href="/castle/35"><li>035 Kanazawa Castle 金沢城</li></a>
-              <a href="/castle/36"><li>036 Maruoka Castle 丸岡城</li></a>
-              <a href="/castle/37"><li>037 Ichijodani Castle 一乗谷城</li></a>
-              <a href="/castle/38"><li>038 Iwamura Castle 岩村城</li></a>
-              <a href="/castle/39"><li>039 Gifu Castle 岐阜城</li></a>
-              <a href="/castle/40"><li>040 Yamanaka Castle 山中城</li></a>
-              <a href="/castle/41"><li>041 Sunpu Castle 駿府城</li></a>
-              <a href="/castle/42"><li>042 Kakegawa Castle 掛川城</li></a>
-              <a href="/castle/43"><li>043 Inuyama Castle 犬山城</li></a>
-              <a href="/castle/44"><li>044 Nagoya Castle 名古屋城</li></a>
-              <a href="/castle/45"><li>045 Okazaki Castle 岡崎城</li></a>
-              <a href="/castle/46"><li>046 Nagashino Castle 長篠城</li></a>
-              <a href="/castle/47"><li>047 Iga Ueno Castle 伊賀上野城</li></a>
-              <a href="/castle/48"><li>048 Matsusaka Castle 松阪城</li></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingFive">
-          <button class="accordion-button d-block text-center collapsed"
-            style="background-color: #e0c5ab; color: #000000; font-size: 2rem" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-            Kansai
-          </button>
-        </h2>
-        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul>
-              <a href="/castle/49"><li>049 Odani Castle 小谷城</li></a>
-              <a href="/castle/50"><li>050 Hikone Castle 彦根城</li></a>
-              <a href="/castle/51"><li>051 Azuchi Castle 安土城</li></a>
-              <a href="/castle/52"><li>052 Kannonji Castle 観音寺城</li></a>
-              <a href="/castle/53"><li>053 Nijo Castle 二条城</li></a>
-              <a href="/castle/54"><li>054 Osaka Castle 大坂城</li></a>
-              <a href="/castle/55"><li>055 Chihaya Castle 千早城</li></a>
-              <a href="/castle/56"><li>056 Takeda Castle 竹田城</li></a>
-              <a href="/castle/57"><li>057 Sasayama Castle 篠山城</li></a>
-              <a href="/castle/58"><li>058 Akashi Castle 明石城</li></a>
-              <a href="/castle/59"><li>059 Himeji Castle 姫路城</li></a>
-              <a href="/castle/60"><li>060 Ako Castle 赤穂城</li></a>
-              <a href="/castle/61"><li>061 Takatori Castle 高取城</li></a>
-              <a href="/castle/62"><li>062 Wakayama Castle 和歌山城</li></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingSix">
-          <button class="accordion-button d-block text-center collapsed"
-            style="background-color: #dbd8ae; color: #000000; font-size: 2rem" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-            Chugoku
-          </button>
-        </h2>
-        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul>
-              <a href="/castle/63"><li>063 Tottori Castle 鳥取城</li></a>
-              <a href="/castle/64"><li>064 Matsue Castle 松江城</li></a>
-              <a href="/castle/65"><li>065 Gassan Toda Castle 月山富田城</li></a>
-              <a href="/castle/66"><li>066 Tsuwano Castle 津和野城</li></a>
-              <a href="/castle/67"><li>067 Tsuyama Castle 津山城</li></a>
-              <a href="/castle/68"><li>068 Bitchu Matsuyama Castle 備中松山城</li></a>
-              <a href="/castle/69"><li>069 Kinojo Castle 鬼ノ城</li></a>
-              <a href="/castle/70"><li>070 Okayama Castle 岡山城</li></a>
-              <a href="/castle/71"><li>071 Fukuyama Castle 福山城</li></a>
-              <a href="/castle/72"><li>072 Koriyama Castle 郡山城</li></a>
-              <a href="/castle/73"><li>073 Hiroshima Castle 広島城</li></a>
-              <a href="/castle/74"><li>074 Iwakuni Castle 岩国城</li></a>
-              <a href="/castle/75"><li>075 Hagi Castle 萩城</li></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingSeven">
-          <button class="accordion-button d-block text-center collapsed"
-            style="background-color: #a6dbbc; color: #000000; font-size: 2rem" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-            Shikoku
-          </button>
-        </h2>
-        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul>
-              <a href="/castle/76"><li>076 Tokushima Castle 徳島城</li></a>
-              <a href="/castle/77"><li>077 Takamatsu Castle 高松城</li></a>
-              <a href="/castle/78"><li>078 Marugame Castle 丸亀城</li></a>
-              <a href="/castle/79"><li>079 Imabari Castle 今治城</li></a>
-              <a href="/castle/80"><li>080 Yuzuki Castle 湯築城</li></a>
-              <a href="/castle/81"><li>081 Matsuyama Castle 松山城</li></a>
-              <a href="/castle/82"><li>082 Ozu Castle 大洲城</li></a>
-              <a href="/castle/83"><li>083 Uwajima Castle 宇和島城</li></a>
-              <a href="/castle/84"><li>084 Kochi Castle 高知城</li></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingEight">
-          <button class="accordion-button d-block text-center collapsed"
-            style="background-color: #bdd3b7; color: #000000; font-size: 2rem" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-            Kyushu
-          </button>
-        </h2>
-        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul>
-              <a href="/castle/85"><li>085 Fukuoka Castle 福岡城</li></a>
-              <a href="/castle/86"><li>086 Ono Castle 大野城</li></a>
-              <a href="/castle/87"><li>087 Hizen Nagoya Castle 肥前名護屋城</li></a>
-              <a href="/castle/88"><li>088 Yoshinogari Site 吉野ヶ里</li></a>
-              <a href="/castle/89"><li>089 Saga Castle 佐賀城</li></a>
-              <a href="/castle/90"><li>090 Hirado Castle 平戸城</li></a>
-              <a href="/castle/91"><li>091 Shimabara Castle 島原城</li></a>
-              <a href="/castle/92"><li>092 Kumamoto Castle 熊本城</li></a>
-              <a href="/castle/93"><li>093 Hitoyoshi Castle 人吉城</li></a>
-              <a href="/castle/94"><li>094 Funai Castle 府内城</li></a>
-              <a href="/castle/95"><li>095 Oka Castle 岡城</li></a>
-              <a href="/castle/96"><li>096 Obi Castle 飫肥城</li></a>
-              <a href="/castle/97"><li>097 Kagoshima Castle 鹿児島城</li></a>
-              <a href="/castle/98"><li>098 Nakijin Castle 今帰仁城</li></a>
-              <a href="/castle/99"><li>099 Nakagusuku Castle 中城城</li></a>
-              <a href="/castle/100"><li>100 Shuri Castle 首里城</li></a>
-            </ul>
+    </div>
+    <div class="tab-content  " id="nav-tabContent">
+      <div class="tab-pane fade  " id="hokkaido-content" role="tabpanel" aria-labelledby="hokkaido-map">
+
+        <div id="hokkaido-border" class="card  border border-white    mx-auto"
+          style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #2c3e44; color: #ffffff">
+          <div class="row    mx-auto "
+            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: #2c3e44; color: #ffffff">
+            <div class="col-4 offset-1">
+              <h1 class="text-center">Hokkaido</h1>
+              
+            <a href="/castle/1">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.5rem">001 - Nemuro Peninsula Chashi Site</li>
+            </a>
+            <a href="/castle/2">
+              <li class="btn btn-outline-light mt-3 text-start col-12" style="font-size: 1.5rem">002 - Goryokaku Fort</li>
+            </a>
+            <a href="/castle/3">
+             <li class="btn btn-outline-light mt-3 text-start col-12" style="font-size: 1.5rem">003 - Matsumae Castle</li>
+            </a>
+        
+            </div>
+            <div class="col-6 mt-3 mb-3">
+              <img id="mappics" src="/images/maps/japanmap2.png"
+                style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
+                alt="Map of Japan's Castles" />
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="tab-content  " id="nav-tabContent">
+      <div class="tab-pane fade  " id="tohoku-content" role="tabpanel" aria-labelledby="tohoku-map">
+
+        <div id="tohoku-border" class="card  border border-white    mx-auto"
+          style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #1d283b; color: #ffffff">
+          <div class="row    mx-auto "
+            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: #1d283b; color: #ffffff">
+            <div class="row col-3 offset-1">
+              <h1 class="text-center">Tohoku</h1>
+             
+            <a href="/castle/4">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">004 - Hirosaki Castle</li>
+            </a>
+            <a href="/castle/5">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">005 - Ne Castle</li>
+            </a>
+            <a href="/castle/6">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">006 - Morioka Castle</li>
+            </a>
+            <a href="/castle/7">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">007 - Taga Castle</li>
+            </a>
+            <a href="/castle/8">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">008 - Sendai Castle</li>
+            </a>
+            
+            <a href="/castle/9">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">009 - Kubota Castle</li>
+            </a>
+            <a href="/castle/10">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">010 - Yamagata Castle</li>
+            </a>
+            <a href="/castle/11">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">011 - Nihonmatsu Castle</li>
+            </a>
+            <a href="/castle/12">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">012 - Aizuwakamatsu Castle</li>
+            </a>
+            <a href="/castle/13">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">013 - Shirakawa Castle</li>
+            </a>
+          
+            </div>
+            <div class="col-6 mt-3 mb-3">
+              <img src="/images/maps/japanmap3.png"
+                style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
+                alt="Map of Japan's Castles" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content  " id="nav-tabContent">
+      <div class="tab-pane fade  " id="kanto-content" role="tabpanel" aria-labelledby="kanto-map">
+
+        <div id="kanto-border" class="card  border border-white    mx-auto"
+          style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #382844; color: #ffffff">
+          <div class="row    mx-auto "
+            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: #382844; color: #ffffff">
+            <div class="row col-5 offset-1">
+              <h1 class="text-center">Kanto</h1>
+              <div class="col-6">
+            <a href="/castle/14">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">014 - Mito Castle</li>
+            </a>
+            <a href="/castle/15">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">015 - Ashikagashi Yakata</li>
+            </a>
+            <a href="/castle/16">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">016 - Minowa Castle</li>
+            </a>
+            <a href="/castle/17">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">017 - Kanayama Castle</li>
+            </a>
+            <a href="/castle/18">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">018 - Hachigata Castle</li>
+            </a>
+            <a href="/castle/19">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">019 - Kawagoe Castle</li>
+            </a>
+           </div> <div class="col-6">
+            <a href="/castle/20">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">020 - Sakura Castle</li>
+            </a>
+            <a href="/castle/21">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">021 - Edo Castle</li>
+            </a>
+            <a href="/castle/22">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">022 - Hachioji Castle</li>
+            </a>
+            <a href="/castle/23">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">023 - Odawara Castle</li>
+            </a>
+            <a href="/castle/24">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">024 - Tsutsujigasaki Palace</li>
+            </a>
+            <a href="/castle/25">
+               <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.1rem">025 - Kofu Castle</li>
+            </a>
+         </div>
+            </div>
+            <div class="col-6 mt-3 mb-3">
+              <img src="/images/maps/japanmap4.png"
+                style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
+                alt="Map of Japan's Castles" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content  " id="nav-tabContent">
+      <div class="tab-pane fade  " id="chubu-content" role="tabpanel" aria-labelledby="chubu-map">
+
+        <div id="chubu-border" class="card  border border-white    mx-auto"
+          style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #3f121c; color: #ffffff">
+          <div class="row    mx-auto "
+            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: #3f121c; color: #ffffff">
+            <div class="row col-4 offset-1">
+              <h1 class="text-center">Chubu</h1>
+               <div class="col-6">
+              
+            <a href="/castle/26">
+              <li class="btn btn-outline-light text-start  col-12" style="font-size: .8rem">026 - Matsushiro Castle</li>
+            </a>
+            <a href="/castle/27">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">027 - Ueda Castle</li>
+            </a>
+            <a href="/castle/28">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">028 - Komoro Castle</li>
+            </a>
+            <a href="/castle/29">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">029 - Matsumoto Castle</li>
+            </a>
+            <a href="/castle/30">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">030 - Takato Castle</li>
+            </a>
+            <a href="/castle/31">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">031 - Shibata Castle</li>
+            </a>
+            <a href="/castle/32">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">032 - Kasugayama Castle</li>
+            </a>
+            <a href="/castle/33">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">033 - Takaoka Castle</li>
+            </a>
+            <a href="/castle/34">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">034 - Nanao Castle</li>
+            </a>
+            <a href="/castle/35">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">035 - Kanazawa Castle</li>
+            </a>
+            <a href="/castle/36">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">036 - Maruoka Castle</li>
+            </a>
+            <a href="/castle/37">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">037 - Ichijodani Castle</li>
+            </a>
+
+             </div><div class="col-6">
+            <a href="/castle/38">
+              <li class="btn btn-outline-light text-start  col-12" style="font-size: .8rem">038 - Iwamura Castle</li>
+            </a>
+            <a href="/castle/39">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">039 - Gifu Castle</li>
+            </a>
+            <a href="/castle/40">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">040 - Yamanaka Castle</li>
+            </a>
+            <a href="/castle/41">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">041 - Sunpu Castle</li>
+            </a>
+            <a href="/castle/42">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">042 - Kakegawa Castle</li>
+            </a>
+            <a href="/castle/43">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">043 - Inuyama Castle</li>
+            </a>
+            <a href="/castle/44">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">044 - Nagoya Castle</li>
+            </a>
+            <a href="/castle/45">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">045 - Okazaki Castle</li>
+            </a>
+            <a href="/castle/46">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">046 - Nagashino Castle</li>
+            </a>
+            <a href="/castle/47">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">047 - Iga Ueno Castle</li>
+            </a>
+            <a href="/castle/48">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: .8rem">048 - Matsusaka Castle</li>
+            </a>
+          
+          </div>
+            </div>
+            <div class="col-6 mt-3 mb-3">
+              <img src="/images/maps/japanmap5.png"
+                style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
+                alt="Map of Japan's Castles" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content  " id="nav-tabContent">
+      <div class="tab-pane fade  " id="kansai-content" role="tabpanel" aria-labelledby="kansai-map">
+
+        <div id="kansai-border" class="card  border border-white    mx-auto"
+          style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #5e4c32; color: #ffffff">
+          <div class="row    mx-auto "
+            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: #5e4c32; color: #ffffff">
+            <div class="row col-5 offset-1">
+              <h1 class="text-center">Kansai</h1>
+             <div class="col-6">
+            <a href="/castle/49">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">049 - Odani Castle</li>
+            </a>
+            <a href="/castle/50">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">050 - Hikone Castle</li>
+            </a>
+            <a href="/castle/51">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">051 - Azuchi Castle</li>
+            </a>
+            <a href="/castle/52">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">052 - Kannonji Castle</li>
+            </a>
+            <a href="/castle/53">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">053 - Nijo Castle</li>
+            </a>
+            <a href="/castle/54">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">054 - Osaka Castle</li>
+            </a>
+            <a href="/castle/55">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">055 - Chihaya Castle</li>
+            </a>
+            </div><div class="col-6">
+            <a href="/castle/56">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">056 - Takeda Castle</li>
+            </a>
+            <a href="/castle/57">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">057 - Sasayama Castle</li>
+            </a>
+            <a href="/castle/58">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">058 - Akashi Castle</li>
+            </a>
+            <a href="/castle/59">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">059 - Himeji Castle</li>
+            </a>
+            <a href="/castle/60">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">060 - Ako Castle</li>
+            </a>
+            <a href="/castle/61">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">061 - Takatori Castle</li>
+            </a>
+            <a href="/castle/62">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">062 - Wakayama Castle</li>
+            </a>
+          </div>
+            </div>
+            <div class="col-6 mt-3 mb-3">
+              <img src="/images/maps/japanmap6.png"
+                style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
+                alt="Map of Japan's Castles" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content  " id="nav-tabContent">
+      <div class="tab-pane fade  " id="chugoku-content" role="tabpanel" aria-labelledby="chugoku-map">
+
+        <div id="chugoku-border" class="card  border border-white    mx-auto"
+          style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #302f1a; color: #ffffff">
+          <div class="row    mx-auto "
+            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: #302f1a; color: #ffffff">
+            <div class="row col-5 offset-1">
+              <h1 class="text-center">Chugoku</h1>
+               <div class="col-6">
+            <a href="/castle/63">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">063 - Tottori Castle</li>
+            </a>
+            <a href="/castle/64">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">064 - Matsue Castle</li>
+            </a>
+            <a href="/castle/65">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">065 - Gassan Toda Castle</li>
+            </a>
+            <a href="/castle/66">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">066 - Tsuwano Castle</li>
+            </a>
+            <a href="/castle/67">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">067 - Tsuyama Castle</li>
+            </a>
+            <a href="/castle/68">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">068 - Bitchu Matsuyama Castle</li>
+            </a>
+
+            </div><div class="col-6">
+            <a href="/castle/69">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">069 - Kinojo Castle</li>
+            </a>
+            <a href="/castle/70">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">070 - Okayama Castle</li>
+            </a>
+            <a href="/castle/71">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">071 - Fukuyama Castle</li>
+            </a>
+            <a href="/castle/72">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">072 - Koriyama Castle</li>
+            </a>
+            <a href="/castle/73">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">073 - Hiroshima Castle</li>
+            </a>
+            <a href="/castle/74">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">074 - Iwakuni Castle</li>
+            </a>
+            <a href="/castle/75">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">075 - Hagi Castle</li>
+            </a>
+          </div>
+            </div>
+            <div class="col-6 mt-3 mb-3">
+              <img src="/images/maps/japanmap7.png"
+                style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
+                alt="Map of Japan's Castles" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content  " id="nav-tabContent">
+      <div class="tab-pane fade  " id="shikoku-content" role="tabpanel" aria-labelledby="shikoku-map">
+
+        <div id="shikoku-border" class="card  border border-white    mx-auto"
+          style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #0c2513; color: #ffffff">
+          <div class="row    mx-auto "
+            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: #0c2513; color: #ffffff">
+            <div class="col-3 offset-1">
+              <h1 class="text-center">Shikoku</h1>
+              
+            <a href="/castle/76">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">076 - Tokushima Castle</li>
+            </a>
+            <a href="/castle/77">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">077 - Takamatsu Castle</li>
+            </a>
+            <a href="/castle/78">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">078 - Marugame Castle</li>
+            </a>
+            <a href="/castle/79">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">079 - Imabari Castle</li>
+            </a>
+            <a href="/castle/80">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">080 - Yuzuki Castle</li>
+            </a>
+            <a href="/castle/81">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">081 - Matsuyama Castle</li>
+            </a>
+            <a href="/castle/82">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">082 - Ozu Castle</li>
+            </a>
+            <a href="/castle/83">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">083 - Uwajima Castle</li>
+            </a>
+            <a href="/castle/84">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1.2rem">084 - Kochi Castle</li>
+            </a>
+         
+            </div>
+            <div class="col-6 mt-3 mb-3">
+              <img src="/images/maps/japanmap8.png"
+                style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
+                alt="Map of Japan's Castles" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content  " id="nav-tabContent">
+      <div class="tab-pane fade  " id="kyushu-content" role="tabpanel" aria-labelledby="kyushu-map">
+
+        <div id="kyushu-border" class="card  border border-white    mx-auto"
+          style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #3d4639; color: #ffffff">
+          <div class="row    mx-auto "
+            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: #3d4639; color: #ffffff">
+            <div class="row col-5 offset-1">
+              <h1 class="text-center">Kyushu</h1>
+           <div class="col-6">
+          
+            <a href="/castle/85">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">085 - Fukuoka Castle</li>
+            </a>
+            <a href="/castle/86">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">086 - Ono Castle</li>
+            </a>
+            <a href="/castle/87">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">087 - Hizen Nagoya Castle</li>
+            </a>
+            <a href="/castle/88">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">088 - Yoshinogari Site</li>
+            </a>
+            <a href="/castle/89">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">089 - Saga Castle</li>
+            </a>
+            <a href="/castle/90">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">090 - Hirado Castle</li>
+            </a>
+            <a href="/castle/91">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">091 - Shimabara Castle</li>
+            </a>
+            <a href="/castle/92">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">092 - Kumamoto Castle</li>
+               </div><div class="col-6">
+            </a>
+            <a href="/castle/93">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">093 - Hitoyoshi Castle</li>
+            </a>
+            <a href="/castle/94">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">094 - Funai Castle</li>
+            </a>
+            <a href="/castle/95">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">095 - Oka Castle</li>
+            </a>
+            <a href="/castle/96">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">096 - Obi Castle</li>
+            </a>
+            <a href="/castle/97">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">097 - Kagoshima Castle</li>
+            </a>
+            <a href="/castle/98">
+            <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">098 - Nakijin Castle</li>
+            </a>
+            <a href="/castle/99">
+              <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">099 - Nakagusuku Castle</li>
+            </a>
+            <a href="/castle/100">
+             <li class="btn btn-outline-light text-start mt-3 col-12" style="font-size: 1rem">100 - Shuri Castle</li>
+            </a>
+          
+          </div>
+            </div>
+            <div class="col-6 mt-3 mb-3">
+              <img src="/images/maps/japanmap9.png"
+                style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
+                alt="Map of Japan's Castles" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
   </div>
 
-  <div class="col-lg-7 mb-4">
-    <img src="/images/japanmap1.png" id="colorfulmappic" class="rounded mx-auto d-block" alt="Map of Japan's Castles" />
-  </div>
+
+
+
+
+
+
+
 </div>
+
+
+
+
+
 
 
 

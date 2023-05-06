@@ -4,23 +4,26 @@
 
 
         <div class="card mx-auto mt-1" style="background: #163850; font-size:larger;  ">
-            <h2 class="card-header text-center" style="background: #163850; color: #ffffff">
+            <h4 class="card-header text-center" style="background: #163850; color: #ffffff">
                 {{stampnumber}}: {{nameen}} - {{namejp}}
-            </h2>
+            </h4>
 
             <ul class="list-group list-group-horizontal  text-center">
 
                 <li class=" card border w-50 ms-0 me-0 "
                     style="border-top-left-radius: 30px; background: #163850; color: #ffffff">Region: {{region}} </li>
                 <li class=" card border w-50 ms-0 me-0 "
-                    style=" border-top-right-radius: 30px; background: #163850; color: #ffffff">Prefecture: {{prefecture}}</li>
+                    style=" border-top-right-radius: 30px; background: #163850; color: #ffffff">Prefecture:
+                    {{prefecture}}</li>
 
             </ul>
 
             <ul class="list-group list-group-horizontal text-center">
 
-                <li class=" card border w-50 ms-0 me-0  " style="background: #163850; color: #ffffff"> City: {{city}}</li>
-                <li class=" card border w-50 ms-0 me-0  " style="background: #163850; color: #ffffff">Type: {{type}}</li>
+                <li class=" card border w-50 ms-0 me-0  " style="background: #163850; color: #ffffff"> City: {{city}}
+                </li>
+                <li class=" card border w-50 ms-0 me-0  " style="background: #163850; color: #ffffff">Type: {{type}}
+                </li>
 
             </ul>
 
@@ -33,7 +36,8 @@
 
             <ul class="list-group list-group-horizontal text-center">
 
-                <li class=" card w-100 border  ms-0 me-0 " style="background: #163850; color: #ffffff"> Access: {{access}}
+                <li class=" card w-100 border  ms-0 me-0 " style="background: #163850; color: #ffffff"> Access:
+                    {{access}}
                 </li>
 
             </ul>
@@ -42,7 +46,7 @@
 
                 <li class=" card w-100 border  ms-0 me-0 "
                     style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #163850; color: #ffffff">
-                    Website: {{website}}</li>
+                    {{website}}</li>
 
             </ul>
 
@@ -78,22 +82,27 @@
                         <div class="row    mx-auto "
                             style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; background: #163850; color: #ffffff">
 
-                            <div class=" mx-auto  ">
-                                <div class="card-body mx-auto mt-4" style="min-height: 530px;">
-                                    <p class="card-title" >{{history}}</p>
-
+                            <div class=" row col-12 mx-auto mt-3 " style="align-items: center; justify-content:center;">
+                                <div class="col-7 mx-auto ">
+                                    <h3 class="text-center" >History of <br>{{nameen}} </h3>
+                                </div>
+                                <div class="  mx-auto p-1  col-4"
+                                    style=" border-radius: 30px; background: #ffffff; ">
+                                    <img src="{{stamppic}}" class=" mx-auto d-block img-fluid">
+                                </div>
+                                
+                                <div class="card-body col-12">
+                                    <p class="card-title mt-2" style="min-height: 530px;">{{history}}</p>
                                 </div>
                             </div>
-                            <div class="  mx-auto p-1 mt-1 mb-4"
-                                style=" border-radius: 30px; background: #e2d5af; max-width: 90%">
-                                <img src="{{stamppic}}" class=" mx-auto d-block img-fluid">
-                            </div>
+
+
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade  " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <div id="travelborder" class="card  row  border border-white   mx-auto col-12"
-                        style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #163850; color: #ffffff; min-height: 747px;">
+                        style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #163850; color: #ffffff; min-height: 739px;">
                         <div class="row    mx-auto "
                             style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; background: #163850; color: #ffffff ">
 
@@ -140,10 +149,3 @@
 </div>
 
 </div>
-
-
-
-
-
-
-
