@@ -53,22 +53,7 @@
 
               <h2 class="text-center"><br>Continue your adventure.</h2>
 
-              {{!-- this toast appears when the username or pass is wrong. relevant js for ALL toasts is in the
-              public login script--}}
-              <div class="toast bg-danger text-white text-center " style="position: absolute; " id="incorrect1"
-                data-bs-delay="3300">
-
-                <strong class="me-auto h4 "><i class="bi-exclamation-triangle "></i> Incorrect username or
-                  password.</strong>
-              </div>
-
-              {{!-- this toast appears when you log in successfully. relevant js for ALL toasts is in the public
-              login script--}}
-              <div class="toast bg-success text-white text-center " style="position: absolute; " id="asdf1"
-                data-bs-delay="1500">
-
-                <strong class="me-auto h4 "><i class="bi-check-circle "></i> Welcome back!</strong>
-              </div>
+              
 
 
 
@@ -87,8 +72,34 @@
 
 
 
-                  <button class="btn btn-primary col-6 mt-4 mb-4" type="submit">Log In</button>
+                  <button class="btn btn-outline-light col-4 mt-4 mb-4" type="submit">Log In</button>
                 </div>
+
+{{!-- this toast appears when the username or pass is wrong. relevant js for ALL toasts is in the
+              public login script--}}
+              <div class="toast bg-danger text-white text-center " style="position: absolute; " id="incorrect1"
+                data-bs-delay="3300">
+
+                <strong class="me-auto h4 "><i class="bi-exclamation-triangle "></i> Incorrect username or
+                  password.</strong>
+              </div>
+
+              {{!-- this toast appears when you log in successfully. relevant js for ALL toasts is in the public
+              login script--}}
+              <div class="toast bg-success text-white text-center " style="position: absolute; " id="asdf1"
+                data-bs-delay="1500">
+
+                <strong class="me-auto h4 "><i class="bi-check-circle "></i> Welcome back!</strong>
+              </div>
+
+
+
+
+
+
+
+
+
               </form>
             </div>
           </div>
@@ -104,22 +115,7 @@
 
 
             <h2 class="text-center"><br>Signing up is fast and easy.</h2>
-            {{!-- this toast appears when something is wrong. relevant js for ALL toasts is in the public login
-            script--}}
-            <div class="toast bg-danger text-white text-center " style="position: absolute; " id="incorrect2"
-              data-bs-delay="3300">
-
-              <strong class="me-auto h4 "><i class="bi-exclamation-triangle-fill "></i> Failed to sign up.</strong>
-            </div>
-
-            {{!-- this toast appears when the account was created successfully. relevant js for ALL toasts is in the
-            public
-            login script--}}
-            <div class="toast bg-success text-white text-center " style="position: absolute; " id="asdf2"
-              data-bs-delay="2200">
-
-              <strong class="me-auto h4 "><i class="bi-check-circle "></i> Account Created! Welcome!</strong>
-            </div>
+           
 
             <form class="form signup-form">
               <div class="form-group">
@@ -138,8 +134,26 @@
                 
                 <input class="form-input" placeholder="Confirm Password" type="password" id="confirm-signup" />
               </div>
-              <div class="col-12 mt-4 mb-4" style="display: flex; justify-content: space-evenly;flex-direction: row;">
-                <button class="btn btn-primary col-6 mt-4 mb-4" type="submit">Sign Up</button>
+              <div class="col-12 mt-2 " style="display: flex; justify-content: space-evenly;flex-direction: row;">
+                <button class="btn btn-outline-light col-4 mt-4 mb-4" type="submit">Sign Up</button>
+              </div>
+ {{!-- this toast appears when something is wrong. relevant js for ALL toasts is in the public login
+            script--}}
+            <div class="toast bg-danger text-white text-center " style="position: absolute; " id="incorrect2"
+              data-bs-delay="3300">
+
+              <strong class="me-auto h4 "><i class="bi-exclamation-triangle-fill "></i> Failed to sign up.</strong>
+            </div>
+
+            {{!-- this toast appears when the account was created successfully. relevant js for ALL toasts is in the
+            public
+            login script--}}
+            <div class="toast bg-success text-white text-center " style="position: absolute; " id="asdf2"
+              data-bs-delay="2200">
+
+              <strong class="me-auto h4 "><i class="bi-check-circle "></i> Account Created! Welcome!</strong>
+            </div>
+
             </form>
 
 
@@ -147,6 +161,7 @@
 
 
           </div>
+          
         </div>
       </div>
     </div>
