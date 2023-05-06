@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Castle } = require("../models");
+const { User, Castle, Stamp } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
@@ -14,11 +14,16 @@ router.get("/", withAuth, async (req, res) => {
     const castleData = await Castle.findAll({});
 
     const castles = castleData.map((castle) => castle.get({ plain: true }));
-    console.log(castles);
+    // console.log(castles);
+
+    const stampData = await Stamp.findAll({});
+
+    const stamps = stampData.map((stamp) => stamp.get({ plain: true }));
 
     res.render("map", {
       users,
       castles,
+      stamps,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -37,21 +42,39 @@ router.get("/login", (req, res) => {
 
 router.get("/stampbook", withAuth, async (req, res) => {
   try {
-      res.render("stamps", {
-        logged_in: req.session.logged_in,
-      });
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render("stamps", {
+      ...user,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
-      res.status(500).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
-router.get("/castle/:stampnumber", withAuth, async (req, res) => {
+
+
+router.get("/castle/:id", withAuth, async (req, res) => {
   try {
-      res.render("castle", {
-        logged_in: req.session.logged_in,
-      });
+
+    const castleData = await Castle.findByPk(req.params.id);
+
+    const castle = castleData.get({ plain: true });
+    console.log(castle);
+
+    res.render("castle", {
+      ...castle,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
-      res.status(500).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
