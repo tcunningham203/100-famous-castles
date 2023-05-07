@@ -11,14 +11,20 @@ Stamp.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    stamppic: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    castle_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "castle",
+        key: "id",
+      },
     },
     datecreated: {
       type: DataTypes.DATE,
       //   allowNull: false,
       defaultValue: DataTypes.NOW,
+    },
+    isOwned: {
+      type: DataTypes.BOOLEAN,
     },
     user_id: {
       type: DataTypes.INTEGER,

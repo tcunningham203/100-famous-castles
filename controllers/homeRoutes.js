@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Castle, Stamp } = require("../models");
+const { User, Castle, Stamp, Review } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
@@ -43,10 +43,11 @@ router.get("/login", (req, res) => {
 router.get("/stampbook", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
+      attributes: { exclude: ["password"] },
     });
 
     const user = userData.get({ plain: true });
+    // console.log(...user);
 
     res.render("stamps", {
       ...user,
@@ -58,11 +59,8 @@ router.get("/stampbook", withAuth, async (req, res) => {
   }
 });
 
-
-
 router.get("/castle/:id", withAuth, async (req, res) => {
   try {
-
     const castleData = await Castle.findByPk(req.params.id);
 
     const castle = castleData.get({ plain: true });
@@ -77,5 +75,27 @@ router.get("/castle/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//sudar
+router.get("/dashboard", async (req, res) => {
+  try {
+    const dbReviewData = await Review.findAll({
+      include: {
+        model: User,
+        attributes: ['email']
+    },
+      order: [['id', 'DESC']],
+    });
+    const reviews = dbReviewData.map((review) => review.get({ plain: true }));
+    res.render("dashboard", {
+      reviews,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+//sudar
 
 module.exports = router;

@@ -1,0 +1,13 @@
+<div class="container d-flex align-items-center flex-wrap justify-content-center">
+    <i class="fa-solid fa-book-bookmark fa-5x m-3 book"></i>
+    <div class="card m-3 w-75">
+        <p id="review-card" href="/review/{{id}}">
+            <div class="card-body">
+                <h3 style="color:red"class="title card-title">{{user_name}}</h3>
+                {{> star-review star_rating }}
+                <p style="color:blue" class="card-text" >{{review_text}}</p>
+                <p style="color:cyan"class="text-end"><em>- {{user.email}}</em></p>
+            </div>
+        </p>
+    </div>
+</div>
