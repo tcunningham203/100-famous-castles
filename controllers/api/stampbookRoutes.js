@@ -4,7 +4,7 @@ const { Stamp, Castle } = require("../../models");
 router.get("/", async (req, res) => {
   try {
     const stampData = await Stamp.findAll({
-      include: [{ model: Castle }],
+      include: [{ model: Castle, attributes: ["stamppic"] }],
     });
     res.status(200).json(stampData);
   } catch (err) {
