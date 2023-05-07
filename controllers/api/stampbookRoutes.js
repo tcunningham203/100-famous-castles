@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Stamp, Castle } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
@@ -12,9 +13,12 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
-    const stampData = await Stamp.create(req.body);
+    const stampData = await Stamp.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
     res.status(200).json(stampData);
   } catch (err) {
     res.status(400).json(err);
