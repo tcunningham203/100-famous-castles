@@ -1,0 +1,38 @@
+
+
+<section class="card m-3">
+    <h2 class="card-header">Contribute</h2>
+
+    <form class="card-body new-review-form">
+        <div>
+            <label class="form-label mb-3" for="review-title">Name:</label>
+            <input class="form-control mb-3" type="text" id="review-title" name="user-name" placeholder="preferred username" />
+        </div>
+
+        <div>
+            <label class="form-label mb-3" for="star_rating">Star Rating:</label>
+            <input type="number" id="star_rating" name="star_rating" placeholder="1-5" class="form-control mb-3"  />
+        </div>
+        <div>
+            <label class="form-label mb-3" for="review">Review:</label>
+            <textarea class="form-control mb-3" id="review" name="review" rows="5" placeholder="Add your thoughts" ></textarea>
+        </div>
+        <button type="submit" OnClick="dashboard" class="btn btn-primary mb-3">Create</button>
+        <button type="button" class="btn btn-primary mb-3" href="/"/>Return</button>
+    </form>
+
+
+
+<section>
+    <h2 class="m-3"> Your Reviews:</h2>
+{{#if reviews.length}}
+{{!-- console.log('reviews.length'); --}}
+    {{#each reviews as |review|}}
+    {{> card review}}
+    <hr>
+    {{/each}}
+
+</section>
+{{/if}}
+</section>
+<script src="/js/add-review.js"></script>
