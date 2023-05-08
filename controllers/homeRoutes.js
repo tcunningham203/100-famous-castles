@@ -77,7 +77,7 @@ router.get("/castle/:id", withAuth, async (req, res) => {
 });
 
 //sudar
-router.get("/dashboard", async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
     const dbReviewData = await Review.findAll({
       include: {
@@ -89,7 +89,7 @@ router.get("/dashboard", async (req, res) => {
     const reviews = dbReviewData.map((review) => review.get({ plain: true }));
     res.render("dashboard", {
       reviews,
-      loggedIn: req.session.loggedIn,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);
@@ -99,3 +99,4 @@ router.get("/dashboard", async (req, res) => {
 //sudar
 
 module.exports = router;
+

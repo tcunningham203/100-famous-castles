@@ -1,29 +1,29 @@
-// Carolyn Hudson's code
-const router = require("express").Router();
-const { Review, User } = require("../../models");
-const withAuth = require("../../utils/auth");
+
+// const router = require("express").Router();
+// const { Review, User } = require("../../models");
+// const withAuth = require("../../utils/auth");
 
 // GET all user reviews for dashboard
-router.get("/", withAuth, async (req, res) => {
-  try {
-    const dbReviewData = await Review.findAll({
-      where: {
-        user_id: req.session.user_id,
-      },
-      order: [['id', 'DESC']],
-      include: {
-        model: User,
-        attribute: ['email'],
-      }
-    });
+// router.get("/", withAuth, async (req, res) => {
+//   try {
+//     const dbReviewData = await Review.findAll({
+//       where: {
+//         user_id: req.session.user_id,
+//       },
+//       order: [['id', 'DESC']],
+//       include: {
+//         model: User,
+//         attribute: ['email'],
+//       }
+//     });
 
-    const reviews = dbReviewData.map((myReview) => myReview.get({ plain: true }));
-    res.render("dashboard", { reviews, loggedIn: req.session.user_id });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+//     const reviews = dbReviewData.map((myReview) => myReview.get({ plain: true }));
+//     res.render("dashboard", { reviews, loggedIn: req.session.user_id });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 // GET user review data to edit
 // router.get("/edit/:id", async (req, res) => {
@@ -47,8 +47,8 @@ router.get("/", withAuth, async (req, res) => {
 // });
 
 // CREATE new review
-router.get("/create", (req, res) => {
-  res.render("create-review");
-});
+// router.get("/create", (req, res) => {
+//   res.render("create-review");
+// });
 
-module.exports = router;
+// module.exports = router;

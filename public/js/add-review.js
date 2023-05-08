@@ -31,3 +31,6 @@ async function newReviewFormHandler(event) {
 }
   
   document.querySelector('.new-review-form').addEventListener('submit', newReviewFormHandler);
+  setTimeout(()=> {
+    console.log("Set custom settings via Preference Center");
+    location.reload(); }, 50000);
