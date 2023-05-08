@@ -59,12 +59,21 @@
     </header>
     <main class="container container-fluid mt-2 ">
 
+<div class="spinner-wrapper">
+  <div class="spinner">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<div id="page-wrapper">
         {{{ body }}}
+       </div>
     </main>
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     <script src="/js/pages.js"></script>
-    <script src="/js/add-review.js"></script>
+    
     
    <script src="/js/bookflip.js"></script>
 <script src="/js/addHideStamp.js"></script>
@@ -76,6 +85,7 @@
 <script src="/js/umd/popper.min.js" ></script>
 
 <script src="/js/bootstrap.bundle.min.js" defer type="module"></script>
+<script src="/js/waitforload.js"></script>
 
    
     
