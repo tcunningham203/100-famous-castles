@@ -1,3 +1,6 @@
+button > i {
+  pointer-events: none;
+} 
 
 
 .cards-wrapper {
