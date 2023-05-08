@@ -22,15 +22,15 @@ async function newReviewFormHandler(event) {
 
     console.log(response)
     
-  // if review response is ok direct page to the dashboard/homepage
-  //  if (response.ok) {
-  //   document.location.replace('/dashboard');
-  //    } else {
-  //     alert(response.statusText);
-  //   }
+
+   if (response.ok) {
+    document.location.reload();
+     } else {
+      alert(response.statusText);
+    }
 }
   
   document.querySelector('.new-review-form').addEventListener('submit', newReviewFormHandler);
-  setTimeout(()=> {
-    console.log("Set custom settings via Preference Center");
-    location.reload(); }, 50000);
+  // setTimeout(()=> {
+  //   console.log("Set custom settings via Preference Center");
+  //   location.reload(); }, 50000);
