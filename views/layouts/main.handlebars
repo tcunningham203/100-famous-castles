@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,15 +10,11 @@
     <link href="/css/bootstrap.min.css.map" rel="stylesheet">
     <link href="/css/bootstrap-icons.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/star-rating.css">
-    
- 
-  <link rel="stylesheet" href="/css/style.css">
-   
-  
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 
-<body class= " mb-2 text-grey" style="background-color: #576672; color: #cecece;">
+<body class=" mb-2 text-grey" style="background-color: #576672; color: #cecece;">
     {{!-- This is the nav bar. Currently only the logout button works because it was part of the placeholder text from
     the module. --}}
     {{!-- TODO: Have the links work. You can do this using the homeroutes.js file, you may also have to create some
@@ -38,18 +34,28 @@
                         {{!-- <input class="form-control bg-light me-3 mb-0 " type="search" style="font-size: 1rem; "
                             placeholder="Search for castles by name, prefecture, number, city, or region"
                             aria-label="Search"> --}}
-                        {{!-- <button class="btn btn-light  mb-0" type="submit" style="font-size: 1.5rem"><i class="bi-search" style="font-size: 1.5rem; "></i></button> --}}
-                    {{!-- </form> --}}
+                        {{!-- <button class="btn btn-light  mb-0" type="submit" style="font-size: 1.5rem"><i
+                                class="bi-search" style="font-size: 1.5rem; "></i></button> --}}
+                        {{!-- </form> --}}
                     <ul class="navbar-nav p-2 flex-fill bd-highlight ">
                         <div class="d-grid gap-2 d-lg-flex mt-2 p-2 flex-fill bd-highlight ">
-                            <button class="btn btn-outline-light col-lg-3  " id="map" type="button" style="font-size: 1.5rem" onclick="renderMapPage()"><i class="bi-geo-alt" style="font-size: 1.5rem; "></i> Castle Map</button>
-                            <button class="btn btn-outline-light   col-lg-3 " id="stamps" type="button" style="font-size: 1.5rem" onclick="renderStampsPage()"><i class="bi-journal-check " style="font-size: 1.5rem; "></i> My Stamps</button>
-                            <button class="btn btn-outline-light  col-lg-3  " id="stamps" type="button" style="font-size: 1.5rem" onclick="renderTestimonialsPage()"><i class="bi-journal-check " style="font-size: 1.5rem;  "></i> Testimonials</button>
-                            <button class="btn btn-outline-secondary  col-lg-3  " id="logout" type="button" style="font-size: 1.5rem"><i class="bi-power" style="font-size: 1.5rem;  "></i> Logout</button>
-                             {{!-- <li class="nav-item p-2"> <a class="nav-link btn-link" href="/dashboard">My Reviews</a> </li> --}}
+                            <button class="btn btn-outline-light col-lg-3  " id="map" type="button"
+                                style="font-size: 1.5rem" onclick="renderMapPage()"><i class="bi-geo-alt"
+                                    style="font-size: 1.5rem; "></i> Castle Map</button>
+                            <button class="btn btn-outline-light   col-lg-3 " id="stamps" type="button"
+                                style="font-size: 1.5rem" onclick="renderStampsPage()"><i class="bi-journal-check "
+                                    style="font-size: 1.5rem; "></i> My Stamps</button>
+                            <button class="btn btn-outline-light  col-lg-3  " id="stamps" type="button"
+                                style="font-size: 1.5rem" onclick="renderTestimonialsPage()"><i
+                                    class="bi-chat-left-quote " style="font-size: 1.5rem;  "></i> Testimonials</button>
+                            <button class="btn btn-outline-secondary  col-lg-3  " id="logout" type="button"
+                                style="font-size: 1.5rem"><i class="bi-power" style="font-size: 1.5rem;  "></i>
+                                Logout</button>
+                            {{!-- <li class="nav-item p-2"> <a class="nav-link btn-link" href="/dashboard">My
+                                    Reviews</a> </li> --}}
                         </div>
                     </ul>
-                    
+
                     {{/if}}
 
                 </div>
@@ -59,39 +65,35 @@
     </header>
     <main class="container container-fluid mt-2 ">
 
-<div class="spinner-wrapper">
-  <div class="spinner">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div id="page-wrapper">
-        {{{ body }}}
-       </div>
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="page-wrapper">
+            {{{ body }}}
+        </div>
     </main>
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     <script src="/js/pages.js"></script>
+
     <script src="/js/add-review.js"></script>
-    
-   <script src="/js/bookflip.js"></script>
-<script src="/js/addHideStamp.js"></script>
-<script src="/js/saveDeleteStamp.js"></script>
-<script src="/js/pullStamps.js"></script>
-   
+
+    <script src="/js/bookflip.js"></script>
+    <script src="/js/addHideStamp.js"></script>
+    <script src="/js/saveDeleteStamp.js"></script>
+    <script src="/js/pullStamps.js"></script>
+
     {{/if}}
- <script src="/js/jquery.js" type="module"></script>
-<script src="/js/umd/popper.min.js" ></script>
+    <script src="/js/jquery.js" type="module"></script>
+    <script src="/js/umd/popper.min.js"></script>
 
-<script src="/js/bootstrap.bundle.min.js" defer type="module"></script>
-<script src="/js/waitforload.js"></script>
+    <script src="/js/bootstrap.bundle.min.js" defer type="module"></script>
+    <script src="/js/waitforload.js"></script>
 
-
-   
-    
-   
-    
 </body>
 
 </html>
