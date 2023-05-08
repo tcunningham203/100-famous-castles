@@ -1,5 +1,3 @@
-
-
 <div class="row col-lg-12 mx-auto mt-2">
     <div class="col-lg-7 p-4 mx-auto border border-white " style="background: #163850; border-radius: 30px;">
         <img src="{{castlepic}}" class=" mx-auto d-block img-fluid" style="border-radius: 30px;">
@@ -56,10 +54,11 @@
 
     </div>
 
-    <div class="col-lg-5 mx-auto castlepagefix" >
+    <div class="col-lg-5 mx-auto castlepagefix">
 
 
-        <div class="card p-0 mt-3 nav nav-tabs nav-fill " style="margin:0; display: contents; height: 100%;    background: #576672; color: #ffffff">
+        <div class="card p-0 mt-3 nav nav-tabs nav-fill "
+            style="margin:0; display: contents; height: 100%;    background: #576672; color: #ffffff">
 
             <nav class="  col-12  p-0 ">
                 <div class="nav nav-tabs nav-fill p-0 border-0 bg-transparent col-lg-12 m-0"
@@ -71,7 +70,7 @@
                     <button class="nav-link col-6" id="nav-profile-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-profile" type="button"
                         style=" border-top-left-radius: 30px; border-top-right-radius: 30px; background: #163850; color: #ffffff; font-size:1.5rem;"
-                        role="tab" aria-controls="nav-profile" aria-selected="false">Notes</button>
+                        role="tab" aria-controls="nav-profile" aria-selected="false">Travel Tips</button>
 
                 </div>
             </nav>
@@ -83,15 +82,16 @@
                         <div class="row    mx-auto "
                             style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; background: #163850; color: #ffffff">
 
-                            <div class=" row col-sm-12 mx-auto mt-3 " style="align-items: center; justify-content:center;">
+                            <div class=" row col-sm-12 mx-auto mt-3 "
+                                style="align-items: center; justify-content:center;">
                                 <div class="col-7 mx-auto ">
-                                    <h3 class="text-center" >History of <br>{{nameen}} </h3>
+                                    <h3 class="text-center">History of <br>{{nameen}} </h3>
                                 </div>
                                 <div class="  mx-auto p-1  me-3  col-4"
                                     style=" border-radius: 30px; background: #ffffff; ">
-                                    <img id="stampeedo" src="{{stamppic}}" class=" mx-auto d-block img-fluid" >
+                                    <img id="stampeedo" src="{{stamppic}}" class=" mx-auto d-block img-fluid">
                                 </div>
-                                
+
                                 <div class="card-body col-sm-12">
                                     <p class="card-title mt-2" style="min-height: 549px;">{{history}}</p>
                                 </div>
@@ -101,52 +101,60 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade  " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    <div id="travelborder" class="card  row  border border-white   mx-auto col-lg-12"
-                        style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #163850; color: #ffffff; min-height: 739px;">
-                        <div class="row    mx-auto "
-                            style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; background: #163850; color: #ffffff ">
-
-                            <div class="card-header mt-3 ps-4 p-2"
-                                style=" border-top-right-radius: 30px; border-top-left-radius: 30px; background: #4f9726; color: #ffffff; font-size:1.2rem;">
-                                USERNAME
-                            </div>
-                            <div class="card-body"
-                                style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #e2d5af; color: #000000">
-
-                                <p class="card-text p-3">Comment Comment Comment Comment Comment Comment Comment Comment
-                                    Comment Comment Comment Comment Comment Comment Comment Comment Comment Comment
-                                    Comment Comment Comment Comment Comment Comment </p>
-
-                            </div>
 
 
-                            <div class="card-body mx-auto mt-3 mb-3 text-center">
-                                <h5>Keep notes from your trip here.</h5>
-                                <form class="">
-                                    <div class=" d-flex  text-right">
 
-                                        <textarea class="form-control ps-4 p-2"
-                                            style="border-bottom-right-radius: 0px; border-top-right-radius: 0px; border-top-left-radius: 30px; border-bottom-left-radius: 30px;"
-                                            placeholder="Share your experience..." id="exampleFormControlTextarea1"
-                                            rows="3"></textarea>
-                                        <button type="submit" class="btn col-lg-2  "
-                                            style=" border-bottom-right-radius: 30px; border-top-right-radius: 30px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;  background: #4f9726; color: #ffffff"><i
-                                                class="bi-plus-circle-fill" style="font-size: 1.7rem; "></i> </button>
-                                    </div>
-                                </form>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+  <div id="travelborder" class="card row border border-white mx-auto col-lg-12"
+    style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #163850; color: #ffffff; min-height: 739px;">
+    <div class="row mx-auto"
+      style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; background: #163850; color: #ffffff">
 
+      <div class="card-body mx-auto mt-3 mb-3 text-center">
+        <h5>Share tips for this castle.</h5>
+        <form id="commentForm">
+          <div class="d-flex text-right ">
+            <textarea class="form-control ps-4 p-2 "
+              style="border-bottom-right-radius: 0px; background: #e7e7e7; border-top-right-radius: 0px; border-top-left-radius: 30px; border-bottom-left-radius: 30px;"
+              placeholder="Share your experience..." id="commentText" rows="3"></textarea>
+            <button type="submit" class="btn col-3"
+              style="border-bottom-right-radius: 30px; border-top-right-radius: 30px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; background: #4f9726; color: #ffffff">
+              <i class="bi-plus-circle-fill" style="font-size: 1.7rem;"></i><br>Post</button>
+          </div>
+        </form>
+      </div>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="commentcard">
+        {{#each notes}}
+        <div class="note-container mb-3">
+          <div class="row">
+            <div class="card-header ps-4 p-2 m-0 col-11"
+              style="border-top-left-radius: 30px; border-top-right-radius: 0px; background: #4f9726; color: #ffffff; font-size:1rem;">
+              {{user.name}}
             </div>
+            <button class="delete-button ps-1 m-0 col-1 text-left"
+              style="border:0; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;  border-top-right-radius: 30px;  background: #535353; color: #ffffff"
+              data-note-id="{{this.id}}">
+              <i class="bi-x-circle" style="font-size: 1.1rem;"></i>
+            </button>
+          </div>
+          <div class="row">
+            <div class="card-body m-0 col-12"
+              style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: #e7e7e7; color: #000000">
+              <p>{{this.content}}</p>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
 
     </div>
 </div>
 
-</div>
-
-</div>
+<script src="/js/noteposting.js"></script>
+<script src="/js/notedeleting.js"></script>
