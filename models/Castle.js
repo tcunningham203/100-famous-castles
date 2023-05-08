@@ -11,6 +11,9 @@ Castle.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    stampnumber: {
+      type: DataTypes.STRING,
+    },
     nameen: {
       type: DataTypes.STRING,
     },
