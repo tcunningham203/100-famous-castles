@@ -47,6 +47,7 @@ Review.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'review'
+        
     }
 );
 
