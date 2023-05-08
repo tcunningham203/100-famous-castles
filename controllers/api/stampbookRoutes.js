@@ -13,6 +13,18 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/user", withAuth, async (req, res) => {
+  try {
+    console.log(req.params.id);
+    const stampData = await Stamp.findAll({
+      where: { user_id: req.session.user_id },
+    });
+    res.status(200).json(stampData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post("/", withAuth, async (req, res) => {
   try {
     const stampData = await Stamp.create({

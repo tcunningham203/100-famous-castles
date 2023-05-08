@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     box.addEventListener("click", function () {
       if (!isAnimating) {
         isAnimating = true;
-        $(this).find("img").removeClass("hidden");
         $(this).find("img").addClass("puff-in-center");
-        setTimeout(function () {
+        setTimeout(() => {
+          $(this).find("img").removeClass("hidden");
           isAnimating = false;
         }, 350);
       }
