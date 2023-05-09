@@ -13,6 +13,11 @@ const pullStamps = async () => {
       userStamps.add(stamp.castle_id);
     });
     console.log(userStamps);
+    let stampCount=userStamps.size;
+    console.log(stampCount);
+
+    document.getElementById("Frank").innerHTML = "Stamps collected:" + stampCount + "/100";
+    
   } else {
     alert("Failed to pull stamps");
     return;

@@ -1,4 +1,4 @@
-// function to create a new book review
+
 async function newReviewFormHandler(event) {
     event.preventDefault();
   
@@ -6,7 +6,7 @@ async function newReviewFormHandler(event) {
     const star_rating = document.querySelector('input[name="star_rating"]').value;
     const review_text = document.querySelector('textarea[name="review"]').value;
 
-    // fetches review data criteria
+   
     const response = await fetch('/api/review', {
       method: 'POST',
       body: JSON.stringify({

@@ -26,9 +26,9 @@
               </div>
             </span>
             <div class="card-body text-dark">
-              <input type="checkbox" onclick="todaysdate()" id="todayis" value="" /><label
-                for="dateStamped">dateStamped</label>
-              {{! <h6 class="card-title">Date Stamped</h6> }}
+              {{!-- <input type="checkbox" onclick="todaysdate()" id="todayis" value="" /><label
+                for="dateStamped">dateStamped</label> --}}
+               <h6 class="card-title">Date Stamped</h6> 
             </div>
           </div>
 
@@ -1934,7 +1934,9 @@
           alt="Map of Japan's Castles" />
         <h1 class="text-center p-3" style="color:#000000">{{name}}'s Stamp Book</h1>
 
-        <h3 class="text-center" style="color:#000000">Stamps Collected: 15/100</h3>
+        <h3 class="text-center" style="color:#000000" id="Frank"></h3>
+        
+        {{!-- Stamps<h3 id="Frank" style="color:#000000">""</h3> --}}
       </figure>
     </div>
   </div>
@@ -1969,16 +1971,3 @@
 </div>
 
 
-<script>
-  function todaysdate() {
-    var checkbox = document.getElementById('todayis'); if
-      (checkbox.checked != false) document.getElementById('todayis').value =
-        getDate(); if (checkbox.checked != true)
-      document.getElementById('todayis').value = "";
-  } function getDate() {
-    var date
-      = new Date(); var day = date.getDate(); var month = date.getMonth() + 1; var
-        year = date.getFullYear() - 2000; if (month < 10) month = "0" + month; if (day
-          < 10) day = "0" + day; var today = year + "" + month + "" + day; return today;
-  }
-</script>

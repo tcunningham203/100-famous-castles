@@ -45,4 +45,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+//Sudar
+  //     connection.query(
+  //       "SELECT COUNT(CASTLE_ID) FROM STAMP GROUP BY (USER_ID)",
+  //       (err, rows) => {
+  //         // When done, release connection
+  //         connection.release();
+  //         if (!err) {
+  //           res.render("edituser", { rows });
+  //         } else {
+  //           console.log(err);
+  //         }
+  //         console.log("Data from students table: \n", rows);
+  //       }
+  //     );
+  //   });
+  // };
+
+  //Sudar
 });
