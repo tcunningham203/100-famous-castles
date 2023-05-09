@@ -37,4 +37,18 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
+router.delete("/:id", withAuth, async (req, res) => {
+  try {
+    const stampData = await Stamp.destroy({
+      where: {
+        castle_id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+    res.status(200).json(stampData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

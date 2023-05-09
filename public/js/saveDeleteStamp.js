@@ -1,5 +1,7 @@
 const element = document.getElementsByClassName("stamp-box");
-// const element2 = document.getElementsByClassName("idk");
+const element2 = document.querySelector(".btn-danger");
+let imageDelete = document.getElementsByClassName("idk");
+const btnDanger = document.querySelector(".btn-danger");
 let text;
 
 const myFunction = async (event) => {
@@ -35,13 +37,32 @@ const myFunction = async (event) => {
   }
 };
 
+const deleteStamp = async (event) => {
+  if ((event.target = imageDelete)) {
+    let span = event.target.parentElement.nextElementSibling.innerHTML;
+    let id = parseInt(span);
+    let castle_id = id;
+    console.log(id);
+    if (castle_id) {
+      const response = await fetch(`/api/stamps/${castle_id}`, {
+        method: "DELETE",
+      });
+    }
+    console.log("deleted");
+  }
+};
+
 for (var i = 0; i < element.length; i++) {
   element[i].addEventListener("click", myFunction);
 }
 
-// for (var j = 0; j < element2.length; j++) {
-//   element2[j].addEventListener("click", myFunction);
-// }
+// deleteStamp();
+
+for (var j = 0; j < imageDelete.length; j++) {
+  imageDelete[j].addEventListener("click", deleteStamp);
+}
+
+// imageDelete.addEventListener("click", deleteStamp);
 
 // for (var k = 0; k < text.length; k++) {
 //   text[k].addEventListener("click", myFunction);
