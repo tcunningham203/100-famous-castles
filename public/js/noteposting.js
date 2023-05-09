@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Reset the input field
         document.getElementById('commentText').value = '';
+        document.location.reload();
+        alert(`Tip added successfully!`)
       } else {
         console.log('Failed to create comment:', response.status);
       }

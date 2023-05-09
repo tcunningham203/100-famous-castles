@@ -30,7 +30,7 @@ const pullStamps = async () => {
 
     if (userStamps.has(id)) {
       el.children[0].classList.remove("hidden");
-      console.log("hidding");
+      console.log(".hidding");
     }
   });
 };

@@ -8,7 +8,7 @@ const currentUserId = getUserId();
 
 // Attach event listener to delete buttons
 document.addEventListener('click', async (event) => {
-  if (event.target.classList.contains('delete-button')) {
+  if (event.target.matches('.delete-button') || event.target.parentNode.matches('.delete-button')) {
     const noteContainer = event.target.closest('.note-container');
     const noteId = event.target.dataset.noteId;
     const noteUserId = event.target.dataset.userId;
