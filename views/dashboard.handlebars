@@ -1,101 +1,70 @@
 
 
-<section class="card m-3" style=" border-radius: 30px;">
-
-     <div id="historyborder" class="card  mx-auto col-12 "
-            style=" border-radius: 30px; background: #163850; color: #ffffff">
-            <div class="row    mx-auto "
-              style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; background: #163850; color: #ffffff">
+    <div  class="card  mx-auto col-8 mt-4 p-3"
+        style=" border-radius: 30px; background: #163850; color: #ffffff">
+        <div class="row    mx-auto "
+            style=" align-items: center; justify-content:center; background: #163850; color: #ffffff">
 
 
 
 
-              <h2 class="text-center"><br>We're a new site looking to become better. Help us improve with your feedback.</h2>
+            <h2 class="text-center">Tell us what you think of Castle Journal.<br> See what others think as well.
+            </h2>
 
 
-<form class="card-body new-review-form row" >
-        <div class="col-6">
-            
-            <input class="form-control mb-3" type="text" id="review-title" name="user-name" placeholder="Your Name" />
+            <form class="card-body new-review-form row">
+                <div class="col-6">
+
+                    <input class="form-control mb-3" type="text" id="review-title" name="user-name"
+                        placeholder="Your Name" />
+                </div>
+
+                <div class="col-6">
+
+                    <input type="number" id="star_rating" name="star_rating"
+                        placeholder="Rate your experience from 1 to 5 stars." class="form-control mb-3" />
+                </div>
+                <div>
+                    
+                    <textarea class="form-control mb-3" id="review" name="review" rows="5"
+                        placeholder="Add your thoughts, preferences, areas of improvement"></textarea>
+                </div>
+                <button type="submit" OnClick="dashboard" class="btn btn-outline-light mx-auto col-4 mt-2 mb-2">Add Public
+                    Feedback</button>
+                {{!-- <button type="button" class="btn btn-primary mb-3" href="/" />Return</button> --}}
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
-
-       <div class="col-6">
-            
-            <input type="number" id="star_rating" name="star_rating" placeholder="Rate your experience from 1 to 5 stars." class="form-control mb-3"  />
-        </div>
-        <div>
-            <label class="form-label mb-3" for="review">Your voice matters:</label>
-            <textarea class="form-control mb-3" id="review" name="review" rows="5" placeholder="Add your thoughts, preferences, areas of improvement" ></textarea>
-        </div>
-        <button type="submit" OnClick="dashboard" class="btn btn-outline-light col-4 mt-4 mb-4">Add Public Feedback</button>
-        {{!-- <button type="button" class="btn btn-primary mb-3" href="/"/>Return</button> --}}
-    </form>
-
-
-              <form class="form login-form " >
-                <div class="form-group">
-
-                  <br>
-                  <input class="form-input" placeholder="Email" type="text" id="email-login" />
-                </div>
-                <div class="form-group">
-                  <br>
-                  <input class="form-input" placeholder="Password" type="password" id="password-login" />
-                </div>
-
-                <div class="col-12 mt-4 mb-4" style="display: flex;justify-content: space-evenly; flex-direction: row;">
-
-
-
-                  <button class="btn btn-outline-light col-4 mt-4 mb-4" type="submit">Log In</button>
-                </div>
-
-                {{!-- this toast appears when the username or pass is wrong. relevant js for ALL toasts is in the
-                public login script--}}
-                <div class="toast bg-danger text-white text-center " style="position: absolute; " id="incorrect1"
-                  data-bs-delay="3300">
-
-                  <strong class="me-auto h4 "><i class="bi-exclamation-triangle "></i> Incorrect username or
-                    password.</strong>
-                </div>
-
-                {{!-- this toast appears when you log in successfully. relevant js for ALL toasts is in the public
-                login script--}}
-                <div class="toast bg-success text-white text-center " style="position: absolute; " id="asdf1"
-                  data-bs-delay="1500">
-
-                  <strong class="me-auto h4 "><i class="bi-check-circle "></i> Welcome back!</strong>
-                </div>
-
-
-
-
-
-
-
-
-
-              </form>
-            </div>
-          </div>
-    <h2 class="card-header">Contribute</h2>
-
+    </div>
     
 
 
 
 
 
-<section>
-    <h2 class="m-3"> Your Reviews:</h2>
-{{#if reviews.length}}
 
-    {{#each reviews as |review|}}
-    {{> card review}}
-    <hr>
-    {{/each}}
 
-</section>
-{{/if}}
-</section>
+    <section>
+        
+        {{#if reviews.length}}
+
+        {{#each reviews as |review|}}
+        {{> card review}}
+        <hr>
+        {{/each}}
+
+    </section>
+    {{/if}}
+
 <script src="/js/add-review.js"></script>

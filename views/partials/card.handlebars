@@ -1,13 +1,19 @@
-<div class="container d-flex align-items-center flex-wrap justify-content-center">
-    <i class="fa-solid fa-book-bookmark fa-5x m-3 book"></i>
-    <div class="card m-3 w-75">
+
+
+<div class="col-12">
+<div  class="card  mx-auto col-6 mt-4 p-3"
+        style=" border-radius: 30px; background: #163850; color: #ffffff">
+        <div class="row    mx-auto "
+            style=" align-items: center; justify-content:center; background: #163850; color: #ffffff">
+
+<div class="card" style="background: #163850; color: #ffffff">
         <p id="review-card" href="/review/{{id}}">
-            <div class="card-body">
-                <h3 style="color:black"class="title card-title">{{user_name}}</h3>
+            <div class="card-body " style="background: #163850; color: #ffffff">
+                <h3 style="color:rgb(255, 255, 255)"class="title card-title">{{user_name}}</h3>
                 {{> star-review star_rating }}
-                <p style="color:blue" class="card-text" >{{review_text}}</p>
-                <p style="color:red"class="text-end"><em>- {{user.email}}</em></p>
+                <p  class="card-text" >{{review_text}}</p>
+                <p class="text-end"><em>- {{user.email}}</em></p>
             </div>
         </p>
     </div>
-</div>
+    </div></div>
