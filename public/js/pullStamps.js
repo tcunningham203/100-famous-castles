@@ -16,7 +16,7 @@ const pullStamps = async () => {
     let stampCount=userStamps.size;
     console.log(stampCount);
 
-    document.getElementById("Frank").innerHTML = "Stamps collected:" + stampCount + "/100";
+    document.getElementById("total-stamps").innerHTML = "Stamps Collected: " + stampCount + "/100";
     
   } else {
     alert("Failed to pull stamps");

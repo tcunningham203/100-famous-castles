@@ -109,6 +109,11 @@
 
               <div class="card-body mx-auto mt-3 mb-3 text-center">
                 <h5>Share tips for this castle.</h5>
+                   <div class="toast bg-success text-white text-center " style="position: absolute; " id="tyvm1"
+                data-bs-delay="1500">
+
+                <strong class="me-auto h4 "><i class="bi-check-circle "></i> Thanks for the tip!</strong>
+              </div>
                 <form id="commentForm">
                   <div class="d-flex text-right ">
                     <textarea class="form-control ps-4 p-2 "
@@ -130,7 +135,7 @@
                       {{user.name}}
                     </div>
                     <button class="delete-button ps-1 m-0 col-1 text-left"
-                      style="border:0; border-top-right-radius: 30px;  background: #535353; color: #ffffff"
+                      style="border:0; border-top-right-radius: 30px;  background: #4f9726; color: #4f9726"
                       data-note-id="{{this.id}}">
                       <i class="bi-x-circle" style="font-size: 1.1rem;"></i>
                     </button>
