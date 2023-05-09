@@ -17,7 +17,7 @@ button > i {
 }
 #page-wrapper {
   opacity: 0;
-  transition: opacity 1s ease;
+  
 }
 .spinner-wrapper {
   position: fixed;
