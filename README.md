@@ -1,20 +1,93 @@
+# Project 2 - Samurai's Code - Castle Journal
+
 # 100-famous-castles
+In 2006, The Japanese Castle Association released a guide book including the Top 100 Japanese castles to visit. This book enables you to collect stamps from each castle adventure you embark on. However, the guide book is written entirely in Japanese. Our application, Castle Journal, is an English companion app for the guide book. You can Use Castle Journal to assist in adequately planning your trip, share your experiences, and update an online version of your stamp book with the stamps you've collected.
 When visiting one of Japan's famous castles, you can apply a unique rubber stamp to your notebook. Use this application to prepare for a trip, read and write reviews, and learn fun facts on your journey to collect all 100 stamps.
 
-## Credits
-We used the one of the modules in Week 14 (part 23) of the bootcamp as a template to set up the server and file structure. After several commits, we altered the original code to fit our purposes. 
+<h1 align="center">
+    <a href="https://rocky-fortress-11303.herokuapp.com" target="_blank">
+     View Demo
+    </a>
+    <br>
+    <a href="https://youtu.be/x7kCOTEZ7GY" target="_blank">
+     Promotional Video
+    </a>
+</h1>
+
+# Project Requirements
+
+You and your group will use everything you’ve learned over the past six modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+
+* Use Node.js and Express.js to create a RESTful API.
+
+* Use Handlebars.js as the template engine.
+
+* Use MySQL and the Sequelize ORM for the database.
+
+* Have both GET and POST routes for retrieving and adding new data.
+
+* Use at least one new library, package, or technology that we haven’t discussed.
+
+* Have a folder structure that meets the MVC paradigm.
+
+* Include authentication (express-session and cookies).
+
+* Protect API keys and sensitive information with environment variables.
+
+* Be deployed using Heroku (with data).
+
+* Have a polished UI.
+
+* Be responsive.
+
+* Be interactive (i.e., accept and respond to user input).
+
+* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+
+* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+
+# User story: 
+
+AS AN English speaker traveling to or living in Japan,
+I WANT to be able to understand my Japanese guidebook,
+SO THAT I can learn about the castle destinations I want to visit, plan my next trip, and keep track of my stamp collection. 
 
 
+## Getting Started <a name = "getting_started"></a>
 
+These instructions will help you determine the technologies used for the project as well as get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Questions that need to be answered:
+### Technologies 
 
-We have the raw data that will be added- for the images, they were found on a certain website. Is it acceptable to just put the link to those images into the database and then have the server call upon that url? Or should we download the pictures and put them somewhere?
+- Bootstrap
+- CSS
+- magic.css
+- MySql
+- Sequelize
+- Express
+- Express-handlebars
+- MySQL
+- Node.js
+- Animista
+- DBeaver
+- Javascript
 
-Leading into my second question: What do we do with pictures? Previously pictures were stored in an asset folder- is there a better way to do it now? Put it somewhere on the server? How does that work? Or is it better to put pictures into the public file?
+### Installing
 
-Regarding the castle database info- what is the preferred way to store it? Currently, we have it as a google sheets doc, but there are options to convert it to a .json file or a csv file. Is one of those preferable over the other? Is there a 3rd, better option based on what we need?
+1. Clone this repo.
+2. Navigate to repo folder.
+3. Run `npm i` to install the packages listed above.
+4. Login to mySQL using `mysql -u root -p`
+5. Seed your db using `node seeds/seed.js`
+4. Run `npm start`
+5. Open a new tab in your browser and navigate to http://localhost:3001
 
-A user creates an account. Is that information added to the same database as the castles? Or should we have 2 databases going at the same time? We eventually want to add commenting/reviewing functionality to each castle's page. How would that work with accounts? Would it create a new column labeled "user1_review" or something, and then all of their reviews would be added to the database? Or is there a better way? 
+## Contact <a name = "contact"></a>
 
-Another functionality we want to add is the ability to flag which castles they've visited, and have a page where they can display the stamps they've collected. How does that work with the database? Does the castle database make a new entry "user_stamps" and then set values in that column to true or false? Is that the way its supposed to be? What if there were like 5 million users? Does that mean the database would have 5 million columns? Is there a better way? Am I totally off track?
+- [Tim Cunningham](https://github.com/tcunningham203)
+
+- [Lauren Sullivan](https://github.com/lnsvn)
+
+- [Frank Olmsted](https://github.com/frankolms)
+
+- [Sudarshan Samaddar](https://github.com/meetsudarshan)
