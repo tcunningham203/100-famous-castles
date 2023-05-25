@@ -21,14 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Parse the response to get the newly created comment
         const newComment = await response.json();
         // Create a new comment element
-        const commentElement = document.createElement('p');
-        commentElement.textContent = newComment.content;
-        // Prepend the new comment to the comments container
-        commentsContainer.prepend(commentElement);
+       
         // Reset the input field
         document.getElementById('commentText').value = '';
-        document.location.reload();
-        alert(`Tip added successfully!`)
+        
+        $("#tyvm1").toast("show");
+        setTimeout(function () {
+          window.location.href = window.location.pathname + "#nav-profile"; // Redirect to notes tab
+        }, 1200);
+        setTimeout(function(){
+          document.location.reload();
+       }, 1200);
       } else {
         console.log('Failed to create comment:', response.status);
       }
@@ -69,3 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
 //     }
 //   });
 // });
+
+ 

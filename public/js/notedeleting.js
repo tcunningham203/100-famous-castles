@@ -23,9 +23,18 @@ document.addEventListener('click', async (event) => {
         if (response.ok) {
           // Note deleted successfully, remove note container from DOM
           noteContainer.remove();
+          $("#tyvm2").toast("show");
+          setTimeout(function () {
+            window.location.href = window.location.pathname + "#nav-profile"; // Redirect to notes tab
+          }, 2200);
         } else {
           // Handle error case
           console.error('Failed to delete note');
+          
+        $("#tyvm3").toast("show");
+        setTimeout(function () {
+          window.location.href = window.location.pathname + "#nav-profile"; // Redirect to notes tab
+        }, 5000);
         }
       } catch (error) {
         console.error('Failed to delete note:', error);
