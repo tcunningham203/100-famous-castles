@@ -26,7 +26,7 @@ async function newReviewFormHandler(event) {
    if (response.ok) {
     document.location.reload();
      } else {
-      alert(response.statusText);
+      console.log(response.statusText);
     }
 }
   

@@ -80,7 +80,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     const dbReviewData = await Review.findAll({
       include: {
         model: User,
-        attributes: ['email']
+        attributes: ['name']
     },
     // specifies ordering by id column
       order: [['id', 'DESC']],

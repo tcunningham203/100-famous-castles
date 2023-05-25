@@ -1,19 +1,16 @@
+<div class="card  mx-auto col-12 mt-4 p-5" style=" border-radius: 30px; background: #163850; color: #ffffff">
+    <div class="row    "
+        style="  background: #163850; color: #ffffff">
 
-
-<div class="col-12">
-<div  class="card  mx-auto col-6 mt-4 p-3"
-        style=" border-radius: 30px; background: #163850; color: #ffffff">
-        <div class="row    mx-auto "
-            style=" align-items: center; justify-content:center; background: #163850; color: #ffffff">
-
-<div class="card" style="background: #163850; color: #ffffff">
-        <p id="review-card" href="/review/{{id}}">
-            <div class="card-body " style="background: #163850; color: #ffffff">
-                <h3 style="color:rgb(255, 255, 255)"class="title card-title">{{user_name}}</h3>
-                {{> star-review star_rating }}
-                <p  class="card-text" >{{review_text}}</p>
-                <p class="text-end"><em>- {{user.email}}</em></p>
-            </div>
-        </p>
+       
     </div>
-    </div></div>
+     <div class="card  text-start" style="background: #163850; color: #ffffff">
+            <p id="review-card" href="/review/{{id}}">
+            <div class="card-body row" style="background: #163850; color: #ffffff">
+                <h3 style="color:rgb(255, 255, 255)" class="title card-title col-md-10">{{user_name}}</h3>
+                <h3 class="col-md-2" >{{> star-review star_rating }} </h3>
+                <p class="card-text">{{review_text}}</p>
+                <p class="text-end"><em>- {{user.name}}</em></p>
+            </div>
+            </p>
+        </div> </div>
