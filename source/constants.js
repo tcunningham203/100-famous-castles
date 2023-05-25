@@ -4,6 +4,8 @@ const castleRegions = {
             long: "Hokkaido",
             short: "HK",
             background: "#2c3e44",
+            fontsize: "1.5rem",
+            li_class: "btn btn-outline-light text-start mt-3 col-md-8 ",
             map_pic: "/images/maps/japanmap2.png",
             castles: [
                 {
@@ -29,6 +31,8 @@ const castleRegions = {
             long: "Tohoku",
             short: "TH",
             background: "#1d283b",
+            fontsize: "1.2rem",
+            li_class: "btn btn-outline-light text-start mt-3 col-md-8",
             map_pic: "/images/maps/japanmap3.png",
             castles: [{
                 id: 4,
@@ -87,6 +91,8 @@ const castleRegions = {
             long: "Kanto",
             short: "KT",
             background: "#382844",
+            fontsize: "1.0rem",
+            li_class: "btn btn-outline-light text-start mt-3 col-md-5",
             map_pic: "/images/maps/japanmap4.png",
             castles: [{
                 id: 14,
@@ -155,6 +161,8 @@ const castleRegions = {
             long: "Chubu",
             short: "CB",
             background: "#3f121c",
+            fontsize: "1.0rem",
+            li_class: "btn btn-outline-light text-start mt-2 col-md-5",
             map_pic: "/images/maps/japanmap5.png",
             castles: [{
                 id: 26,
@@ -278,6 +286,8 @@ const castleRegions = {
             long: "Kansai",
             short: "KS",
             background: "#5e4c32",
+            fontsize: "1.0rem",
+            li_class: "btn btn-outline-light text-start mt-3 col-md-5",
             map_pic: "/images/maps/japanmap6.png",
             castles: [{
                 id: 49,
@@ -356,6 +366,8 @@ const castleRegions = {
             long: "Chugoku",
             short: "CG",
             background: "#302f1a",
+            fontsize: "1.0rem",
+            li_class: "btn btn-outline-light text-start mt-3 col-md-5",
             map_pic: "/images/maps/japanmap7.png",
             castles: [{
                 id: 63,
@@ -429,6 +441,8 @@ const castleRegions = {
             long: "Shikoku",
             short: "SK",
             background: "#0c2513",
+            fontsize: "1.2rem",
+            li_class: "btn btn-outline-light text-start mt-3 col-md-8",
             map_pic: "/images/maps/japanmap8.png",
             castles: [{
                 id: 76,
@@ -482,6 +496,8 @@ const castleRegions = {
             long: "Kyushu",
             short: "KY",
             background: "#3d4639",
+            fontsize: "1.0rem",
+            li_class: "btn btn-outline-light text-start mt-3 col-md-5",
             map_pic: "/images/maps/japanmap9.png",
             castles: [{
                 id: 85,

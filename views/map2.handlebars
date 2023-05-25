@@ -50,25 +50,22 @@
 
                 <div id="{{region.[0].long}}-border" class="card  border border-white p-3  mx-auto"
                 style=" border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; background: {{region.[0].background}}; color: #ffffff">
+                   <h1 class="text-center mt-3 p-0 m-0 ">{{region.[0].long}}</h1>
+                   
                     <div class="row    mx-auto "
                         style="border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; align-items: center; justify-content:center; width:100%; background: {{region.[0].background}}; color: #ffffff">
-                        <div class="col-md-4 col-md-offset-1">
-                            <h1 class="text-center mt-3 mb-2 ">{{region.[0].long}}</h1>
+                        <div class="col-md-6 col-md-offset-1 p-0 text-center">
+                            
                             
                         {{#each region.[0].castles as |castle|}}
                             <a href="/castle/{{castle.id}}">
-                                <li class="btn btn-outline-light text-start mt-3 col-md-12" style="font-size: 1.5rem">{{castle.number}} - {{castle.name}}</li>
+                                <li class="{{region.[0].li_class}}" style="font-size:{{region.[0].fontsize}} ">{{castle.number}} - {{castle.name}}</li>
                             </a>
                         {{/each}}
-                            {{!-- <a href="/castle/2">
-                                <li class="btn btn-outline-light mt-3 text-start col-md-12" style="font-size: 1.5rem">002 - Goryokaku Fort</li>
-                            </a>
-                            <a href="/castle/3">
-                                <li class="btn btn-outline-light mt-3 text-start col-md-12" style="font-size: 1.5rem">003 - Matsumae Castle</li>
-                            </a> --}}
+                           
                     
                         </div>
-                        <div class="col-md-6 mt-3 mb-3">
+                        <div class="col-md-5 mt-3 mb-3">
                             <img id="mappics" src={{region.[0].map_pic}}
                             style="width: 100%; height: 100%; max-width: 2000px; max-height: 2000px;" class="rounded  d-block"
                             alt="Map of Japan's Castles" />

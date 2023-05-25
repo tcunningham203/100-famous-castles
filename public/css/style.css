@@ -2,6 +2,10 @@ button > i {
   pointer-events: none;
 } 
 
+a {
+  
+  text-decoration: none;
+}
 
 .cards-wrapper {
   display: flex;
