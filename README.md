@@ -6,7 +6,7 @@ When visiting one of Japan's famous castles, you can apply a unique rubber stamp
 
 <h1 align="center">
     <a href="https://rocky-fortress-11303.herokuapp.com" target="_blank">
-     View Demo
+     Deployed Application
     </a>
     <br>
     <a href="https://youtu.be/x7kCOTEZ7GY" target="_blank">
