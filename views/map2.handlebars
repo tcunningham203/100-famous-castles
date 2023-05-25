@@ -1,3 +1,9 @@
+{{!--DEVELOPER NOTE: This page originally featured a lot more hard coding, but was altered to be more of a dynamic template. We hope to improve our stamp book page in a similar way. 
+
+In the original, hard coded version of this page, the CSS on the buttons was meant to be different depending on which tab was open. For example, the Hokkaido page, which has only 3 buttons, should have larger font and more space. Compare this to Chubu, which has 23 regions, and needed 2 columns of buttons and closer spacing. After going from hard coding to this current template style, the buttons changed to the same size and spacing on all pages. 
+
+To achieve the desired look we wanted with the buttons, we added some strings to the constants.js file which allow the buttons to change depending on which region is shown. See line 66 of this file.--}}
+
 <div class="row ms-1 me-1 mt-4">
 
     <div class="card p-0  nav nav-tabs nav-fill "
