@@ -25,6 +25,7 @@ router.get("/user", withAuth, async (req, res) => {
   }
 });
 
+// create stamp entry for user
 router.post("/", withAuth, async (req, res) => {
   try {
     const stampData = await Stamp.create({
@@ -37,6 +38,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
+// delete stamp entry for user
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     const stampData = await Stamp.destroy({

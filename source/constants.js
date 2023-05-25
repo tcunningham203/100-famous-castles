@@ -1,3 +1,5 @@
+// catsle region data 
+// used in map page
 const castleRegions = {
     Hokkaido: [
         {
