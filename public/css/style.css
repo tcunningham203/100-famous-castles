@@ -112,12 +112,12 @@ button > i {
   top:-1px;
 }
 
-#hokkaido-border {
+#Hokkaido-border {
   border-top:1px solid rgb(255, 255, 255);
   position: relative;
 }
 
-#hokkaido-border:before {
+#Hokkaido-border:before {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:16%;
@@ -128,7 +128,7 @@ button > i {
   top:-1px;
 }
 
-#hokkaido-border:after {
+#Hokkaido-border:after {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:4%;
@@ -139,12 +139,12 @@ button > i {
   top:-1px;
 }
 
-#tohoku-border {
+#Tohoku-border {
   border-top:1px solid rgb(255, 255, 255);
   position: relative;
 }
 
-#tohoku-border:before {
+#Tohoku-border:before {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:28%;
@@ -155,7 +155,7 @@ button > i {
   top:-1px;
 }
 
-#tohoku-border:after {
+#Tohoku-border:after {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:16%;
@@ -166,12 +166,12 @@ button > i {
   top:-1px;
 }
 
-#kanto-border {
+#Kanto-border {
   border-top:1px solid rgb(255, 255, 255);
   position: relative;
 }
 
-#kanto-border:before {
+#Kanto-border:before {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:40%;
@@ -182,7 +182,7 @@ button > i {
   top:-1px;
 }
 
-#kanto-border:after {
+#Kanto-border:after {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:28%;
@@ -193,12 +193,12 @@ button > i {
   top:-1px;
 }
 
-#chubu-border {
+#Chubu-border {
   border-top:1px solid rgb(255, 255, 255);
   position: relative;
 }
 
-#chubu-border:before {
+#Chubu-border:before {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:52%;
@@ -209,7 +209,7 @@ button > i {
   top:-1px;
 }
 
-#chubu-border:after {
+#Chubu-border:after {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:40%;
@@ -220,12 +220,12 @@ button > i {
   top:-1px;
 }
 
-#kansai-border {
+#Kansai-border {
   border-top:1px solid rgb(255, 255, 255);
   position: relative;
 }
 
-#kansai-border:before {
+#Kansai-border:before {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:64%;
@@ -236,7 +236,7 @@ button > i {
   top:-1px;
 }
 
-#kansai-border:after {
+#Kansai-border:after {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:52.1%;
@@ -247,12 +247,12 @@ button > i {
   top:-1px;
 }
 
-#chugoku-border {
+#Chugoku-border {
   border-top:1px solid rgb(255, 255, 255);
   position: relative;
 }
 
-#chugoku-border:before {
+#Chugoku-border:before {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:76%;
@@ -263,7 +263,7 @@ button > i {
   top:-1px;
 }
 
-#chugoku-border:after {
+#Chugoku-border:after {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:64.1%;
@@ -274,12 +274,12 @@ button > i {
   top:-1px;
 }
 
-#shikoku-border {
+#Shikoku-border {
   border-top:1px solid rgb(255, 255, 255);
   position: relative;
 }
 
-#shikoku-border:before {
+#Shikoku-border:before {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:88%;
@@ -290,7 +290,7 @@ button > i {
   top:-1px;
 }
 
-#shikoku-border:after {
+#Shikoku-border:after {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:76.1%;
@@ -301,12 +301,12 @@ button > i {
   top:-1px;
 }
 
-#kyushu-border {
+#Kyushu-border {
   border-top:1px solid rgb(255, 255, 255);
   position: relative;
 }
 
-#kyushu-border:after {
+#Kyushu-border:after {
   padding:0;margin:0;display:block;/* probably not really needed? */
   content: "";
   width:11.9%;

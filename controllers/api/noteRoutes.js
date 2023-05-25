@@ -41,55 +41,52 @@ router.get('/:castleId', withAuth, async (req, res) => {
   });
   
   // Update a note
-  router.put('/:noteId', withAuth, async (req, res) => {
-    try {
-      const noteId = req.params.noteId;
-      const { content } = req.body;
+  // router.put('/:noteId', withAuth, async (req, res) => {
+  //   try {
+  //     const noteId = req.params.noteId;
+  //     const { content } = req.body;
   
-      const updatedNote = await Note.update(
-        {
-          content,
-        },
-        {
-          where: {
-            id: noteId,
-          },
-        }
-      );
+  //     const updatedNote = await Note.update(
+  //       {
+  //         content,
+  //       },
+  //       {
+  //         where: {
+  //           id: noteId,
+  //         },
+  //       }
+  //     );
   
-      if (!updatedNote) {
-        res.status(404).json({ message: 'Note not found' });
-        return;
-      }
+  //     if (!updatedNote) {
+  //       res.status(404).json({ message: 'Note not found' });
+  //       return;
+  //     }
   
-      res.status(200).json(updatedNote);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+  //     res.status(200).json(updatedNote);
+  //   } catch (err) {
+  //     res.status(500).json(err);
+  //   }
+  // });
   
 // DELETE /api/notes/:id - Delete a note by ID
 router.delete('/:id', async (req, res) => {
-  try {
-    const noteId = req.params.id;
 
-    // Use Sequelize to find and delete the note
-    const deletedNote = await Note.destroy({
+  try {
+    const noteData = await Note.destroy({
       where: {
-        id: noteId,
+        id: req.params.id,
+        user_id: req.session.user_id,
       },
     });
 
-    if (deletedNote) {
-      // Note deleted successfully
-      res.status(200).json({ message: 'Note deleted' });
-    } else {
-      // Note not found
-      res.status(404).json({ error: 'Note not found' });
+    if (!noteData) {
+      res.status(404).json({ message: 'No post found with this id!' });
+      return;
     }
-  } catch (error) {
-    console.error('Failed to delete note:', error);
-    res.status(500).json({ error: 'Failed to delete note' });
+
+    res.status(200).json(noteData);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
